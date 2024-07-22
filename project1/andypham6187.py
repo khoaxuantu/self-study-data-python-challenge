@@ -1,5 +1,5 @@
 #Exception func
-class BadInputError (Exception): # Lmao syntax convention?
+class BadInputError (Exception): # syntax convention?
   """
   Dude, we have not reached the OOP or custom error topic -_-
   """
@@ -9,7 +9,6 @@ class BadInputError (Exception): # Lmao syntax convention?
 #convertion func -- Typo ~
 def convertion (input_unit, input_num):
   #convert the number into smallest unit
-  # I'm dead to look at this if...else hell -_-
   if input_unit.lower () in ['nm', 'nanometer']: # Syntax convention?
     nm_num = input_num
   elif input_unit.lower () in ['um', 'micrometer']:
@@ -69,3 +68,8 @@ while True:
     print (f"{user_number} {user_unit} = {result} {convert_unit}")
     print ()
 print ('Thank you!')
+
+"""
+The syntax is awkward to me, perhaps. It's different from the usual conventions.
+"""
+

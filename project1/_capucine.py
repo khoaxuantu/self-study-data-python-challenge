@@ -18,5 +18,5 @@ yard = float(input("Enter yard to convert to foot: "))
 foot = yard * 3   # 1 yard = 3 foot
 print(f"{yard} yard is equal to {foot:.2f} foot.")
 
-# Only 4 conversion => 2 bonus points
+# Only 4 conversions, we require more...
 

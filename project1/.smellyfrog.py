@@ -167,6 +167,17 @@ def main():
             print("Sir this is a Wendys. Please enter a number from 1 to 31.\n")
             continue
         
+        """
+        We can combine this to the `conversions` dictionary above
+        So the code can be reduced dramatically
+        For example, a new dictionary with the form:
+        ```
+        {
+            '1': meters_to_feet,
+            ...
+        }
+        ```
+        """
         from_unit, to_unit = {
             '1': ('meters', 'feet'),
             '2': ('meters', 'miles'),
