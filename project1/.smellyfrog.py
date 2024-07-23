@@ -168,6 +168,8 @@ def main():
             continue
         
         """
+        Reviewer:
+
         We can combine this to the `conversions` dictionary above
         So the code can be reduced dramatically
         For example, a new dictionary with the form:
@@ -221,5 +223,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-# Too long don't read :)
+# Reviewer: Too long don't read :)
 

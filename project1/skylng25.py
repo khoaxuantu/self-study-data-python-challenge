@@ -1,20 +1,26 @@
 def km_to_miles(km):
     return km * 0.621371
 
+
 def miles_to_km(miles):
     return miles * 1.60934
+
 
 def meters_to_feet(meters):
     return meters * 3.28084
 
+
 def feet_to_meters(feet):
     return feet * 0.3048
+
 
 def celsius_to_fahrenheit(celsius):
     return (celsius * 9/5) + 32
 
+
 def fahrenheit_to_celsius(fahrenheit):
     return (fahrenheit - 32) * 5/9
+
 
 def main():
     print("Unit Converter")
@@ -24,9 +30,7 @@ def main():
     print("4. Feet to Meters")
     print("5. Celsius to Fahrenheit")
     print("6. Fahrenheit to Celsius")
-    
     choice = input("Enter your choice (1-6): ")
-    
     if choice == '1':
         km = float(input("Enter distance in kilometers: "))
         miles = km_to_miles(km)
@@ -56,6 +60,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# Noice
 

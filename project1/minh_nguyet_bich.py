@@ -3,7 +3,7 @@ unit1 = input(f'Enter Starting Unit of Measurement (millimeter, meter, kilometer
 unit2 = input(f'Enter Unit of Measurement to Convert to (millimeter, meter, kilometer) ->').strip().lower()
 while unit1 and unit2 in valid_units:
     value = float(input(f'Enter Starting Measurement in {unit1}  -> '))
-    # Don't be if...else slave dude -.-
+    # Reviewer: Don't be if...else slave dude -.-
     if unit1 == "millimeter" and unit2 == "millimeter":
             answer = float(value)
     elif unit1 == "millimeter" and unit2 == "meter":

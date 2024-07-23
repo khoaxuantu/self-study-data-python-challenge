@@ -12,7 +12,7 @@ while True:
     unit_in = input("Nhập đơn vị ban đầu (m, km, miles, ft, cm, inch, mm): ").lower()
     if unit_in in units:
         try:
-          unit_out_list = []
+          unit_out_list = [] # It is better to have your identication be consistent, 2 is 2 or 4 is 4
           print("Nhập các đơn vị muốn chuyển sang (m, km, miles, ft, cm, inch, mm) để trống và nhấn Enter để kết thúc:")
           while True:
               unit_out = input("Nhập đơn vị: ").lower()
@@ -42,5 +42,5 @@ while True:
     else:
         print("Đơn vị nhập vào không hợp lệ. Vui lòng thử lại.")
 
-# Noice
+# Reviewer: Noice
 

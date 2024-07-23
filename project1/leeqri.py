@@ -123,7 +123,7 @@ weight_dict= {
 }
 
 def convert_weight(from_weight, to_weight, value):
-    if (from_weight in weight_list) and (to_weight in weight_list): # weight_list is not defined, so I cannot give you points -_-
+    if (from_weight in weight_list) and (to_weight in weight_list): # Reviewer: weight_list is not defined, so I cannot give you points -_-
         value_converted = value*weight_dict[from_weight][to_weight]
         print("Entering Starting Unit of Measurement: " + from_weight)
         print("Enter Unit of Measurement to Convert to: " + to_weight)

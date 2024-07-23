@@ -13,7 +13,7 @@ while(True):
     end_to = int(input('- Enter unit of measurement to convert to   '))
     x = float(input('- Enter starting measurement   '))
     
-    # Don't be if...else slave dude -.-
+    # Reviewer: Don't be if...else slave dude -.-
     if start_to == 1 and end_to == 1:
           print(x)
     elif start_to == 1 and end_to == 2:  

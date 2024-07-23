@@ -45,5 +45,15 @@ print(f"{minutes} minutes is {seconds} seconds")
 print(f"{seconds} seconds is {milliseconds} milliseconds")
 print(f"{milliseconds} milliseconds is {microseconds} microseconds")
 
-# Noice :3 Clean code
+"""
+You only convert each unit one time only, it does not fulfill the requirements.
+The requirements require you to make at least 3 convertible units.
+
+For example:
+minute -> hour & hour -> minute,
+second -> minute & minute -> second,
+millisecond -> second & second -> millisecond
+
+So you earn 1 bonus point
+"""
 

@@ -19,7 +19,7 @@ for i, unit in enumerate(units):
 
 value = float(input("Value: "))
 
-# Need out of bound input handler. I saw that you set 1 - 11 here, but how about the conversion_factors?
+# Reviewer: Need out of bound input handler. I saw that you set 1 - 11 here, but how about the conversion_factors?
 from_unit_index = int(input("From (1-11): ")) - 1 
 to_unit_index = int(input("To (1-11): ")) - 1
 

@@ -8,7 +8,7 @@ def Converter(x, unit1, unit2):
         'month'  : 2592000,
         'year'   : 31557600
     }
-    if unit1 not in time_values: # Can be 'or unit 2 not in time_values' instead of 2 ifs 
+    if unit1 not in time_values: # Reviewer: Can be `or unit 2 not in time_values` instead of 2 ifs 
         return "Invalid"
     if unit2 not in time_values: 
         return "Invalid"

@@ -1,3 +1,6 @@
+"""
+You only provide 4 conversion units, so the bonus points are 2
+"""
 
 # Conversion factors
 METER_TO_KILOMETER = 0.001
@@ -65,18 +68,18 @@ def convert_units():
         print("2. Kilometers")
         print("3. Feet")
         print("4. Miles")
-        input_unit = int(input("Enter the number corresponding to your choice: ")) # Needs out of bound input handler
+        input_unit = int(input("Enter the number corresponding to your choice: ")) # Reviewer: Needs out of bound input handler
         
         print("Select the output unit:")
         print("1. Meters")
         print("2. Kilometers")
         print("3. Feet")
         print("4. Miles")
-        output_unit = int(input("Enter the number corresponding to your choice: ")) # Needs out of bound input handler
+        output_unit = int(input("Enter the number corresponding to your choice: ")) # Reviewer: Needs out of bound input handler
         
         value = float(input("Enter the value to convert: "))
         
-        # I'm dead -.-
+        # Reviewer: I'm dead -.-
         if input_unit == 1:
             if output_unit == 1:
                 result = value

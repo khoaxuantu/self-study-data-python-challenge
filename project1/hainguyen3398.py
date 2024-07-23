@@ -22,7 +22,7 @@ while True:
                 break
         except ValueError:
             print("!!! Invalid input. Please enter a numerical value. !!!")
-    # Don't be if...else slave dude -_-
+    # Reviewer: Don't be if...else slave dude -_-
     if start == 'm' :
         if result == 'm':
             print("Result: ",value,"m =",1*value,"m")

@@ -1,6 +1,6 @@
 class UnitConverter:
     """
-    Dude we have not reached the OOP topic yet -_-
+    Reviwer: Dude we have not reached the OOP topic yet -_-
     """
     def __init__(self):
         self.conversion_factors = {
@@ -61,5 +61,5 @@ if __name__ == "__main__":
     ui = UserInterface()
     ui.run()
 
-# The code looks clean. Spotted one smurf here :xien:
+# Reviwer: The code looks clean. Spotted one smurf here :xien:
 

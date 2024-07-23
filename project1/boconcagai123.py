@@ -38,5 +38,5 @@ def foot_to_centimeter(foot):
 
 foot = float(3)
 centimeter = foot_to_centimeter(foot)
-print(f"{centimeter} centimeter = {foot:2f} centimeter") # If I'm not wrong, it should be foot on the right instead of centimeter
+print(f"{centimeter} centimeter = {foot:2f} centimeter") # Reviewer: If I'm not wrong, it should be foot on the right instead of centimeter
 

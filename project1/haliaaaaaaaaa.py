@@ -1,4 +1,4 @@
-# Don't be if...else slave dude -_-
+# Reviewer: Don't be if...else slave dude -_-
 def converters(input_a, input_b, value):
     if input_a == 'Yard':
         if input_b == 'Meter':
@@ -60,7 +60,7 @@ def converters(input_a, input_b, value):
 def main():
     # get input_a from user
 
-    # Please handle the out of bound cases
+    # Reviewer: Please handle the out of bound cases
     input_a = input("Enter Starting Unit of Measurement(Yard, Inch, Meter, Foot, Mile, KiloMeter): ")
     input_b = input("Enter Unit of Measurement to Convert to (Yard, Inch, Meter, Foot, Mile, KiloMeter): ")
     value = float(input("Enter value: "))

@@ -1,4 +1,5 @@
 def convert_length(value, from_unit, to_unit):
+    # The readability will be better if you put this constant outside of the method
     conversion_to_meters = {
         'meters': 1,
         'kilometers': 1000,
@@ -38,5 +39,5 @@ def result():
 
 result()
 
-# Noice clean code
+# Reviewer: Noice clean code
 

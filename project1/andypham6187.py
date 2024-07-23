@@ -6,10 +6,10 @@ class BadInputError (Exception): # syntax convention?
   def __init__ (self,message):
     self.message = message
 
-#convertion func -- Typo ~
+#convertion func -- Reviewer: Typo ~
 def convertion (input_unit, input_num):
   #convert the number into smallest unit
-  if input_unit.lower () in ['nm', 'nanometer']: # Syntax convention?
+    if input_unit.lower () in ['nm', 'nanometer']: # Reviewer: Syntax convention?
     nm_num = input_num
   elif input_unit.lower () in ['um', 'micrometer']:
     nm_num = input_num * (10**3)
@@ -70,6 +70,7 @@ while True:
 print ('Thank you!')
 
 """
+Reviewer:
 The syntax is awkward to me, perhaps. It's different from the usual conventions.
 """
 

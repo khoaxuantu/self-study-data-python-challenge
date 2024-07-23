@@ -33,5 +33,16 @@ converted_values = [conversion_dict[f"meters_to_{unit}"](value) if unit!= 'meter
 print([f"{value} meters" for value in values])
 print([f"equal to {value} ({unit})" for value, unit in zip(converted_values, units)])
 
-# Noice
+"""
+Noice
+
+But you only perform one-direction conversions, which does not fulfill the requirements.
+So you earn 1 bonus point for it
+
+The requirements require you to make at least 3 convertible units
+For example:
+minute -> hour & hour -> minute,
+second -> minute & minute -> second,
+millisecond -> second & second -> millisecond
+"""
 

@@ -37,5 +37,5 @@ while True:
     if cont != 'yes':
         break
 
-# Nice try :) Would be better if you make your standard outputs prettier
+# Reviewer: Nice try :) Would be better if you make your standard outputs prettier
 

@@ -136,8 +136,8 @@ def convert(value, from_unit, to_unit, category):
 if __name__ == "__main__":
     category = input("Enter the category (length, temperature, area, volume, weight, time): ").strip().lower()
     value = float(input("Enter the value: "))
-    from_unit = input("Enter the unit to convert from: ").strip().lower() # I need a suggestion for each category :dead:
-    to_unit = input("Enter the unit to convert to: ").strip().lower() # Same
+    from_unit = input("Enter the unit to convert from: ").strip().lower() # Reviewer: I need a suggestion for each category :dead:
+    to_unit = input("Enter the unit to convert to: ").strip().lower() # Reviewer: Same as above
 
     try:
         result = convert(value, from_unit, to_unit, category)

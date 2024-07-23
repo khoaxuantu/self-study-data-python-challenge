@@ -8,7 +8,7 @@ C1 = input("Enter Your Unit of Conversion: ")
 V1 = float(input("Enter Your Value: "))
 result = 0
 
-# Don't be if...else slave bruh -.-
+# Reviewer: Don't be if...else slave bruh -.-
 if M1 == C1:
         result = V1
         print('=> Result:', V1, M1,'=', result, C1)

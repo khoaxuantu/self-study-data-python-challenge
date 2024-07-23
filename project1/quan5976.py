@@ -44,5 +44,5 @@ ket_qua = gia_tri_met / bang_don_vi[don_vi_dich]
 
 print(f"{gia_tri} {don_vi_goc} = {ket_qua} {don_vi_dich}")
 
-# :)
+# Reviewer: Noice :)
 

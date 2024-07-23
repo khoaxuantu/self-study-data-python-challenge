@@ -1,5 +1,6 @@
 class UnitConverter:
     """
+    Reviewer:
     Dude we have not reached the OOP topic -_-
     But overally, I don't think your are truly OOP here. It looks like you are just using class more
     """
@@ -66,7 +67,7 @@ class UnitConverter:
             raise ValueError("Invalid units for this category.")
         
         # Handle temperature conversions separately
-        # I swear if you use OOP truely, you don't need any of these if...else :)
+        # Reviewer: I swear if you use OOP truely, you don't need any of these if...else :)
         if category == 'temperature':
             if from_unit == 'Celsius':
                 if to_unit == 'Fahrenheit':
@@ -89,6 +90,7 @@ class UnitConverter:
         base_unit_to = self.conversions[category][to_unit]
         return value * (base_unit_from / base_unit_to)
 
+    # Reviewer:
     # Erm... What is the purpose of the user_input method inside the class `UnitConverter`?
     # Why we don't lift the input operations out of the class? Just let the `UnitConverter` do the converting units
     def user_input(self):

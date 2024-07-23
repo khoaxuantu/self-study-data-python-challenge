@@ -81,7 +81,7 @@ def convert(converter, fromUnit, toUnit, value):
     converter = converter.lower()
     fromUnit = fromUnit.lower()
     toUnit = toUnit.lower()
-    assert ( # Lovely! Great to see some asserts here. Would be better if you use them with except then
+    assert ( # Reviewer: Lovely! Great to see some asserts here. Would be better if you use them with except then
         converter in converter_dict
     ), f"Invalid converter, only support: {', '.join(converter_dict.keys())}"
     assert (
@@ -105,5 +105,5 @@ def interface():
 
 interface()
 
-# Noice. You overkill it :)
+# Reviewer: Noice. You overkill it :)
 

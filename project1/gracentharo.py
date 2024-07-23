@@ -80,5 +80,5 @@ yards = 300
 meters = yards_to_meters(yards)
 print(f'{yards} yards = {meters:.2f} meters')
 
-# I wish we have some abstract functions to handle all these methods
+# Reviewer: I wish we have some abstract functions to handle all these methods
 
