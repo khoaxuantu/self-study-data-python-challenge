@@ -1,0 +1,22 @@
+def convert_length(value, from_unit, to_unit):
+    units = {
+        'meter': 1,
+        'kilometer': 0.001,
+        'centimeter': 100,
+        'millimeter': 1000,
+        'micrometer': 1000000,
+        'nanometer': 1000000000
+    }
+
+    value_in_meters = value / units[from_unit]
+    converted_value = value_in_meters * units[to_unit]
+    return converted_value
+
+from_unit = input("Enter Starting Unit of Measurement (meter, kilometer, centimeter, millimeter, micrometer, nanometer): ")
+to_unit = input("Enter Unit of Measurement to Convert To (meter, kilometer, centimeter, millimeter, micrometer, nanometer): ")
+value = float(input(f"Enter Starting Measurement in {from_unit.title()}: "))
+
+result = convert_length(value=value, from_unit=from_unit, to_unit=to_unit)
+print(f"Result: {value} {from_unit.title()} = {result} {to_unit.title()}")
+
+#Great job!
