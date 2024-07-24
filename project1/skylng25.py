@@ -1,63 +1,41 @@
-def km_to_miles(km):
-    return km * 0.621371
-
-
-def miles_to_km(miles):
-    return miles * 1.60934
-
-
-def meters_to_feet(meters):
-    return meters * 3.28084
-
-
-def feet_to_meters(feet):
-    return feet * 0.3048
-
-
-def celsius_to_fahrenheit(celsius):
-    return (celsius * 9/5) + 32
-
-
-def fahrenheit_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * 5/9
-
+def convert_length(value, from_unit, to_unit):
+    # Conversion factors to meters
+    to_meters = {
+        'inches': 0.0254,
+        'feet': 0.3048,
+        'yards': 0.9144,
+        'meters': 1,
+        'kilometers': 1000,
+        'miles': 1609.34
+    }
+    
+    # Convert to meters first, then to the target unit
+    meters = value * to_meters[from_unit]
+    return meters / to_meters[to_unit]
 
 def main():
-    print("Unit Converter")
-    print("1. Kilometers to Miles")
-    print("2. Miles to Kilometers")
-    print("3. Meters to Feet")
-    print("4. Feet to Meters")
-    print("5. Celsius to Fahrenheit")
-    print("6. Fahrenheit to Celsius")
-    choice = input("Enter your choice (1-6): ")
-    if choice == '1':
-        km = float(input("Enter distance in kilometers: "))
-        miles = km_to_miles(km)
-        print(f"{km} kilometers is equal to {miles:.2f} miles")
-    elif choice == '2':
-        miles = float(input("Enter distance in miles: "))
-        km = miles_to_km(miles)
-        print(f"{miles} miles is equal to {km:.2f} kilometers")
-    elif choice == '3':
-        meters = float(input("Enter distance in meters: "))
-        feet = meters_to_feet(meters)
-        print(f"{meters} meters is equal to {feet:.2f} feet")
-    elif choice == '4':
-        feet = float(input("Enter distance in feet: "))
-        meters = feet_to_meters(feet)
-        print(f"{feet} feet is equal to {meters:.2f} meters")
-    elif choice == '5':
-        celsius = float(input("Enter temperature in Celsius: "))
-        fahrenheit = celsius_to_fahrenheit(celsius)
-        print(f"{celsius}°C is equal to {fahrenheit:.2f}°F")
-    elif choice == '6':
-        fahrenheit = float(input("Enter temperature in Fahrenheit: "))
-        celsius = fahrenheit_to_celsius(fahrenheit)
-        print(f"{fahrenheit}°F is equal to {celsius:.2f}°C")
-    else:
-        print("Invalid choice. Please enter a number between 1 and 6.")
+    units = ['inches', 'feet', 'yards', 'meters', 'kilometers', 'miles']
+    
+    print("Enter Starting Unit of Measurement(inches, feet, yards, meters, kilometers, miles): ", end='')
+    from_unit = input().lower()
+    
+    print("Enter Unit of Measurement to Convert to(inches, feet, yards, meters, kilometers, miles): ", end='')
+    to_unit = input().lower()
+    
+    if from_unit not in units or to_unit not in units:
+        print("Invalid unit. Please choose from the given options.")
+        return
+    
+    print(f"Enter Starting Measurement in {from_unit.capitalize()}: ", end='')
+    value = float(input())
+    
+    result = convert_length(value, from_unit, to_unit)
+    
+    print(f"Result: {value} {from_unit.capitalize()} = {result:.2f} {to_unit.capitalize()}")
 
 if __name__ == "__main__":
     main()
 
+#Good work! However, please be careful with the output. Limiting the decimal points to (2f) causes the output cannot show all the answers correctly.
+#For example: 
+# Output: 1.0 Meters = 0.00 Kilometers
