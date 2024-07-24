@@ -1,4 +1,18 @@
+"""
+Bruh we have not reached the OOP topic yet
+"""
+
 # Temp converter
+# I don't see any reason to have an abstract class here, it's even not implemented as an abstract 
+# class
+# 
+# What is the purpose of creating a TempConverter class and then creating CelsiusTemp, KelvinTemp, etc...
+# that inherit the TempConverter?
+# 
+# They even don't have the same behaviors to apply inheritance here.
+# 
+# Why don't you create a family of classes that will perform conversion logics, and another family
+# of classes that will perform the properties of an unit or a family of units?
 class TempConverter:
     def __init__(self, in_num) -> None:
         self.in_num = in_num
@@ -222,6 +236,12 @@ def tempConvertMenu() -> None:
                 in_subcate_1 = False
             else: continue
 
+# You create a ton of classes and then you still have to do a if...else hell here?
+# Why don't you place all the options in any kind of data structures then use a somewhat navigator class
+# to decide which logics or strategies that will be used?
+# 
+# You even don't need to copy paste the whole bunch of `paste` belows. Just put it in a method of 
+# the conversion class, the properties will handle what it should be.
 def weightConveterModule(module_no):
     print('Chon thang do muon chuyen doi sang: ')
     print('\n8. Kilogram \n9. Gram \n10. Milligram \n11. Metric Ton \n12. Long Ton \n13. Short Ton \n14. Carrat')
@@ -442,3 +462,7 @@ if __name__ == "__main__":
 
 
 #Gud job~!
+
+# Nope, just over-engineering stuffs.
+# Please use OOP in the complex-enough problems, this is not the case. 
+

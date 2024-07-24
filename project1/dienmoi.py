@@ -23,4 +23,6 @@ inches = float(input("Inch: "))
 cm = inches * 2.54
 print(str(cm) + " Centimeter")
 
-# This project requires you to convert between a pair, which means from KM -> M and from M -> KM. So you have 6 conversions = 3 pairs
+# This project requires you to write convertible units, which means from KM -> M and from M -> KM. 
+# Meanwhile you have 6 conversions = 3 pairs. So you earn 1 bonus point
+

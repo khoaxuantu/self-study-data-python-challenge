@@ -1,7 +1,8 @@
 """
-- Nice work! But this project requires you to convert between a pair, which means from KM -> M and from M -> KM. So you have 6 conversions = 3 pairs
+Nice work! This project requires you to write convertible units, which means from KM -> M and from M -> KM. 
+Meanwhile you have 6 conversions = 3 pairs. So you earn 1 bonus point
 
-- You can further improve your program by placing your code into a loop, for example
+You can further improve your program by placing your code into a loop, for example
 
 while True:
        print("Enter 0 to stop the program")
