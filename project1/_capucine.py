@@ -8,10 +8,10 @@ inch = float(input("Enter inch to convert to centimeter: "))
 centimeter = inch * 2.54   # 1 inch = 2.54 centimeters
 print(f"{inch} inch is equal to {centimeter:.2f} centimeter.")
 
-# Gram to kilogram conversion
-gram = float(input("Enter gram to convert to kilogram: "))
-kilogram = gram / 1000   # 1 gram = 1/1000 kilogram
-print(f"{gram} gram is equal to {kilogram:.2f} kilogram.")
+# Milimeter to micrometer conversion
+milimeter = float(input("Enter milimeter to convert to micrometer: "))
+micrometer = milimeter * 1000   # 1 milimeter = 1000 micrometer
+print(f"{milimeter} milimeter is equal to {micrometer:.2f} micrometer.")
 
 # Yard to foot conversion
 yard = float(input("Enter yard to convert to foot: "))
@@ -19,4 +19,3 @@ foot = yard * 3   # 1 yard = 3 foot
 print(f"{yard} yard is equal to {foot:.2f} foot.")
 
 # Reviewer: Only 4 conversions, we require more...
-

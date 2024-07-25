@@ -1,9 +1,8 @@
 def convert_length(value, from_unit, to_unit):
     length_units = {
-        'meters': 1,
-        'kilometers': 0.001,
-        'miles': 0.000621371,
-        'yards': 1.09361
+        'inches': 1,
+        'feet': 1/12,
+        'yards': 1/36
     }
 
     if from_unit in length_units and to_unit in length_units:
@@ -81,26 +80,41 @@ def convert_area(value, from_unit, to_unit):
     else:
         return None
 
-# Ví dụ sử dụng
-length_conversion = convert_length(10, 'meters', 'kilometers')
-mass_conversion = convert_mass(5, 'kilograms', 'pounds')
-temp_conversion_c_to_f = convert_temperature(100, 'Celsius', 'Fahrenheit')
-length_conversion_miles_to_yards = convert_length(1, 'miles', 'yards')
-mass_conversion_grams_to_ounces = convert_mass(200, 'grams', 'ounces')
-temp_conversion_k_to_c = convert_temperature(273.15, 'Kelvin', 'Celsius')
-volume_conversion = convert_volume(2, 'liters', 'gallons')
-time_conversion = convert_time(3600, 'seconds', 'hours')
-area_conversion = convert_area(10000, 'square meters', 'acres')
+def get_conversion_function(unit_type):
+    if unit_type == 'length':
+        return convert_length
+    elif unit_type == 'mass':
+        return convert_mass
+    elif unit_type == 'temperature':
+        return convert_temperature
+    elif unit_type == 'volume':
+        return convert_volume
+    elif unit_type == 'time':
+        return convert_time
+    elif unit_type == 'area':
+        return convert_area
+    else:
+        return None
 
-print("10 meters to kilometers:", length_conversion)
-print("5 kilograms to pounds:", mass_conversion)
-print("100 Celsius to Fahrenheit:", temp_conversion_c_to_f)
-print("1 mile to yards:", length_conversion_miles_to_yards)
-print("200 grams to ounces:", mass_conversion_grams_to_ounces)
-print("273.15 Kelvin to Celsius:", temp_conversion_k_to_c)
-print("2 liters to gallons:", volume_conversion)
-print("3600 seconds to hours:", time_conversion)
-print("10000 square meters to acres:", area_conversion)
+def main():
+    unit_type = input("Enter Type of Measurement (length, mass, temperature, volume, time, area): ").strip().lower()
+    from_unit = input(f"Enter Starting Unit of Measurement ({unit_type}): ").strip().lower()
+    to_unit = input(f"Enter Unit of Measurement to Convert to ({unit_type}): ").strip().lower()
+    value = float(input(f"Enter Starting Measurement in {from_unit.capitalize()}: "))
+
+    convert_function = get_conversion_function(unit_type)
+    if convert_function:
+        result = convert_function(value, from_unit, to_unit)
+        if result is not None:
+            print(f"Result: {value} {from_unit.capitalize()} = {result} {to_unit.capitalize()}")
+        else:
+            print("Invalid units of measurement entered.")
+    else:
+        print("Invalid type of measurement entered.")
+
+if __name__ == "__main__":
+    main()
+
 
 # Reviewer: Noice
 
