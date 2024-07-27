@@ -4,3 +4,4 @@ This folder contains all participants' codes and the reviews associated with eac
 
 Each file is named as your Discord username, so please choose your correct file and see if your code is qualified enough.
 
+> P/S: Don't take the bad grammar seriously 😃 We made the reviews quickly, so we did not correct them carefully.
