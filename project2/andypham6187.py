@@ -105,3 +105,7 @@ while True:
     result = calculate (user_input_list, operation = '+')
     print (f"Result: {result} = {continuous_cal(user_input_list)} \n")
 print ("Thank you so much!")
+#I saw that you used the eval function. It would be better and more convinient 
+#for both of us if you utilize it all, as it is allowed.
+#I think you have not finished your work on the 5th requirements
+#Good job!

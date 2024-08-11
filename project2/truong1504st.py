@@ -41,3 +41,6 @@ def calculator():
         print("Kết quả:", result)
 if __name__ == "__main__":
     calculator()
+#Nice work!
+#Python built-in function is allowed, I recommend looking through it!
+#The 3rd bonus point requires the operations can be different!

@@ -50,3 +50,5 @@ while True:
         else:
             print(f"kết quả: {result} = {eval(result)}")    
             result = str(eval(result))
+#Good work!
+#Consider writing a calculation system (which use the ANS keyword to refer to the lastest result) for more user choices!

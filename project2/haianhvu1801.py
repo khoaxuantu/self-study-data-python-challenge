@@ -57,7 +57,8 @@ else:
     print('Invalid operation entered')
 print('The result of the operation is {}'.format(result))
 
-
+#You didn't include the MODULO choice in the options so it doesn't count towards your score
+#Overall, good job!
 # In[ ]:
 
 

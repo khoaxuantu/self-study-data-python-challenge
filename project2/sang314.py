@@ -34,3 +34,5 @@ def calculator():
             print("Error:", e)
 
 calculator()
+#Nice work!
+#Consider using a keyword like 'ANS' to refer to the last result for user-experience!

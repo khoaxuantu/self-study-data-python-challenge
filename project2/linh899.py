@@ -56,4 +56,5 @@ def calculate():
 
 calculate()
 
-
+#Gud job! But the 3rd requirement requires you to do more than 2 pairs of numbers with different operations. E.g: 5+2-8
+#Keep up the good works! Feel free to look through others' projects or ask us if you have any questions

@@ -84,3 +84,5 @@ while True:
         break
     else:
         print("Invalid choice. Please enter 1, 2, or 'exit'.")
+
+#Noiceee! You nailed it this time! Keep it up!!

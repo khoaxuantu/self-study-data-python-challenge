@@ -71,3 +71,5 @@ def calculate():
     
     print(f"Result {Cal}: {result}")
 calculate()
+
+#Good job! But beware that the 3rd requirements requires you to calculate 3 or more numbers with different operation, e.g 3+5-3/2

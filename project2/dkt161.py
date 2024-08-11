@@ -105,7 +105,9 @@ def calculator():
                     continue
             elif not input_validation(expression[-1], input_str):
                 continue
-
+              
             expression += input_str if is_number(input_str) else operations[input_str.upper()]
 
 calculator()
+
+#You nailed it! Really like the way you carefully thought about different cases!

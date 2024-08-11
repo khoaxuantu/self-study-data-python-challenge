@@ -54,3 +54,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+#Good job on finishing this project! However, I don't really understand your intention with the "=" operator.
+#As my observation in your code, it kinda...useless. User can press enter for the answers to show up.
+#Remember to validating your inputs as well, sing try/except as we learned.
+#Anyway, keep up the good works!!

@@ -215,3 +215,5 @@ class Calculator:
 
 if __name__ == '__main__':
   Calculator().welcome()
+#Overkill this small project!
+#Keep fighting!

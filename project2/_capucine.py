@@ -96,3 +96,7 @@ if choice in operations:
 else:
     print("Invalid input")
 
+# modulo is not designed for float values, just be aware!
+# https://stackoverflow.com/questions/6102948/why-does-modulus-division-only-work-with-integers
+# beware of validiating input values. Eg: input value is string would crash the code
+# also division by zero case was not included.

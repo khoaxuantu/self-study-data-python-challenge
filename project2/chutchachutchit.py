@@ -39,3 +39,6 @@ elif select == 4:
 					divide(number_1, number_2))
 else:
 	print("Invalid input")
+#Eval() function is allowed and welcomed to use!
+#You can look through other projects to improve yours.
+#Good job!

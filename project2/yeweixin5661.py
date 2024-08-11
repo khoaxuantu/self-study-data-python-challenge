@@ -23,3 +23,5 @@ while True:
         print(f"Value: {current_val}")
     except Exception as e:  
         print(f"Error in calculation: {e}")  
+#You nailed it!
+#Good job!

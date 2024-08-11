@@ -17,3 +17,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+#Nice! However, just my opinion but I hope you can mention which operations can your calculator perform.

@@ -86,3 +86,5 @@ if __name__ == "__main__":
     
     app = CalculatorApp(root)
     root.mainloop()
+
+#Gud job on finishing this project! Nice UI btw!

@@ -26,3 +26,7 @@ def your_num():
         print("Your input is not correct")
 
 your_num()
+
+#Python is famous for many convinient built-in functions: float, int, eval.
+#You can look through other projects to improve yours. Feel free to ask us!
+#Good job!

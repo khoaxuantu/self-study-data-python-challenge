@@ -62,3 +62,6 @@ while True:
 
 if __name__ == "__main__":
     calculator()
+
+#Keep up the good works!
+

@@ -33,3 +33,6 @@ if __name__ == "__main__":
     val_input, first_num, second_num = get_user_input()
     result, sign = handle_operation(choice=val_input, val1=first_num, val2=second_num)
     print(f"Result: {first_num} {sign} {second_num} = {result}")
+
+#Keep up the good work!
+#Beware of validiating input values. Eg: input value is string would crash the code

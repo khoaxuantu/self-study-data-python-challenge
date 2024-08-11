@@ -80,3 +80,4 @@ while True:
     elif ques2.lower() == 'c':
         tmp = input(f"Enter an expression (Please write your input in the form 'a + b' or '(a + b) * c)'): {result} ")
         expression = str(result) + ' ' + tmp
+#Good job! Considering making it more user friendly like what you have said on the above.

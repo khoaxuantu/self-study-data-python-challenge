@@ -48,3 +48,4 @@ def tinh_toan_lien_tuc():
 
 
 tinh_toan_lien_tuc()
+#Guddd Job! You nailed it using eval() function. Keep it up!

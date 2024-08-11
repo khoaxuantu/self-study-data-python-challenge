@@ -26,3 +26,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# We know that eval() is a strong function and can do mostly of our requirement but be more careful because you didn't handle validating your inputs or other cases like Division by 0. 
+# Keep it up next time!

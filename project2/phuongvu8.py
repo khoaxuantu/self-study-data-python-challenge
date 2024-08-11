@@ -38,3 +38,5 @@ else:
     print()
     print('The syntax is not true.')  
     
+#Good job on finishing this project! Since you already used the eval() function, I believe you can utilize it to finish the 4th and 5th requirement, just need a little more coding.
+#Feel free to ask us or look through others' projects if you have any questions.

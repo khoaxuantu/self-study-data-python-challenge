@@ -53,3 +53,9 @@ while True:
             break
     else:
         print('Invalid operator, try again!')
+
+#Overall, good job but I think you are misunderstanding a bit about the requirements.
+#The 3rd requirement need you to calculate 3 numbers with any different operations. For example: 2 + 4 * 6
+#The 5th requires you to continue calculating based on the result you already have. That means you can continue calculate till you want to stop. Not only 2 times.
+#Moreover, the 5th requires all of the above requirements, you missed the 4th so it didn't count actually.
+#Keep it up!!

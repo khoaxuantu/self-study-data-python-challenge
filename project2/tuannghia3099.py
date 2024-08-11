@@ -135,3 +135,5 @@ while i < 3:
                 break
     choice1 = input('Enter Choice (+,-,*,/,%): ')
     i += 1
+#Good job!
+#Eval() is allowed, I recommend looking through it!

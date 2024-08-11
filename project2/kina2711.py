@@ -113,3 +113,5 @@ class Calculator(tk.Tk):
 if __name__ == "__main__":
     app = Calculator()
     app.mainloop()
+
+#Noice! You overkill this small project! Keep it up!

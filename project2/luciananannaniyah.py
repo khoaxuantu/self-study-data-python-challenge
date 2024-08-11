@@ -48,3 +48,5 @@ while True:
   else:
     last_result = result
     print(f"Result: {result}")
+
+#Fuiyohh! You overkill this project! Keep it up!!

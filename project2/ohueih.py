@@ -43,3 +43,8 @@ if input0 in operation:
 
 else:
 	print("Please enter valid choice (A, S, M, D)")
+
+
+#Gud job on finishing this project! '
+#However, just to let you know, Python is famous for many convinient built-in functions: e.g: eval() and also other ways to think out of the box to finish this project.
+#I hope you can look through other projects to improve yours. Feel free to ask us!

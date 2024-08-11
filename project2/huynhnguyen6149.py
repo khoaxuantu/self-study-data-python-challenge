@@ -19,3 +19,5 @@ while choose == 1:
     expression = str(input('Type in the expression: '))
     result = continue_exp(result_0, expression)
     print(f'Result: {result_0} {expression} = {result}')
+
+#Nice! You overkill this project.
