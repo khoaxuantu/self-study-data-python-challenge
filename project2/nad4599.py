@@ -150,3 +150,10 @@ calculator = AdvancedCalculator()
 
 # Perform continuous calculation
 calculator.continuous_calculation()
+
+# Your current implementation of the AdvancedCalculator class does not correctly handle expressions like (a+b)*c in its calculate_expression method. 
+# Specifically, the sanitize_expression method only processes the expression to handle individual numbers and basic operators, but it doesn't correctly preserve or handle the order of operations involving parentheses.
+# Since our 5th requirement requires to complete all other requirement so you can get only 3 score.
+# Keep it up! I believe be more careful will help you in your next project.
+
+

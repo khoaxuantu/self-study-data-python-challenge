@@ -21,3 +21,6 @@ def func():
     print("wrong operator")
 
 func()
+#Nice work!
+#Eval() is allowed! Consider looking through it!
+#Also try to validating the user input. Like checking if a division by zero would appear!

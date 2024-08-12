@@ -73,7 +73,7 @@ btEqual = Button(cal,padx = 33, fg = 'black',font = ('arial',15,'bold'),text = '
 cal.mainloop()
 
 
-
+#You overkill this project! Nice UI!
 
 
 

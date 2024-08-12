@@ -71,3 +71,5 @@ def calculator():
         print(f"Result: {numbers_str} = {result}")
 
 calculator()
+
+#Good job. However, the 3rd requirement require you to calculate 3 numbers or more with different operations. Eg. 2 + 3 * 6

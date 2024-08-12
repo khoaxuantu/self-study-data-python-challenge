@@ -59,3 +59,6 @@ def calculator():
 
 if __name__ == "__main__":
     calculator()
+
+#Gud job on completing the project! You are not far from completing the 4th and 5th requirements, feel free to ask us or take a look to others' projects for ideas.
+#Keep it up!

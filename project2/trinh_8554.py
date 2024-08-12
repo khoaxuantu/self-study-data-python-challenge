@@ -44,3 +44,5 @@ def calculator():
             print("Invalid choice. Please try again.")
 
 calculator()
+#Goood job!
+#Keep up the good works!

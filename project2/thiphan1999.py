@@ -76,3 +76,6 @@ while True:
         continue
 calculate = eval(expression)
 print(calculate)
+
+#Good work!
+#Since you have already used the eval() function, I recommend finding ways to shorten the code!

@@ -75,3 +75,6 @@ elif a1=='2':
                     break
                 elif c1=='C':
                     continue
+
+#Since you already used the eval() function, I hope you can utlize it more to shorten your code.
+#Feel free to ask us or take a look at others'projects for more ideas.

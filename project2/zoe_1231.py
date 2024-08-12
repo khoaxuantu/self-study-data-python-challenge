@@ -57,4 +57,6 @@ while True:
     continue_calculate = input("Do you want to perform another calculation? (Yes/No): ").lower()
     if continue_calculate != 'yes':
         break
-
+    
+#Keep it up!
+#Check out eval() function!

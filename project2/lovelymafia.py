@@ -27,3 +27,6 @@ while start_calulation == 1:
     start_calulation = int(input("Do you want to continue? (1 for yes, 0 for no)"))
     count += 1
 print("Thank you for using the calculator")
+
+#Gud job on completing the project! You are not far from completing the 4th and 5th requirements, feel free to ask us or take a look to others' projects for ideas.
+#Keep it up!

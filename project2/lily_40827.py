@@ -113,3 +113,6 @@ def calculation():
             break
 calculation()
 
+#Gud job! But the 3rd requirement requires you to do more than 2 pairs of numbers with different operations. E.g: 5+2-8
+#Besides, I think your guide about modulo operation is not totally consistent, you mention 'Mo' but user have to type 'L' for the function to work
+#Keep it up!

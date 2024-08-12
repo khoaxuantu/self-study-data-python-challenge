@@ -72,4 +72,10 @@ while continue_cal == True:
     else: 
         print("Please re-enter the operator code form 1 to 7 only!")
 
+#I think your statement from 1 to 7 is not really easy to understand, I think it should be from 1 to 6
+#Overall, good job but I think you are misunderstanding a bit about the requirements.
+#The 3rd requirement need you to calculate 3 numbers with any different operations. For example: 2 + 4 * 6
+#The 5th requires you to continue calculating based on the result you already have. That means you can continue calculate till you want to stop. Not only 3
+#Keep up the good work!
+
 

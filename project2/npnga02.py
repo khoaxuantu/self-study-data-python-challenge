@@ -74,3 +74,6 @@ def continuous_calculation():
         print(f"Result: {current_result}")
 
 continuous_calculation()
+
+#Gud job! But the 3rd requirement requires you to do more than 2 pairs of numbers with different operations. E.g: 5+2-8
+#Besides, it looks like you haven't define any evaluate_expression() function so you couldn't do the grouping task (4th requirement).

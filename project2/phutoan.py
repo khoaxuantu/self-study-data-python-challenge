@@ -64,3 +64,5 @@ btcl = Button(cal,padx = 37, fg = 'black',font = ('arial',15,'bold'),text = ')',
 btAns = Button(cal,padx = 22, fg = 'black',font = ('arial',15,'bold'),text = 'Ans',command = AnsClick, bg = 'aqua').grid(row = 6, column = 2)
 btEqual = Button(cal,padx = 33, fg = 'black',font = ('arial',15,'bold'),text = '=',command = EqualClick, bg = 'aqua').grid(row = 6, column = 3)
 cal.mainloop()
+
+#You nailed it! Nice UI

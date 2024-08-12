@@ -39,3 +39,5 @@ def calculator():
             result = None
 
 calculator()
+#Gud job! However, I believe you can imporve your code by make it more user-friendly! Guide your user how to use it, not everyone read the code like us.
+#Keep it up!!

@@ -82,3 +82,5 @@ def calculate():
                 print('Invalid input. Please choose Y or N.')
 
 calculate()
+
+#Keep up the good works!
