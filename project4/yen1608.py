@@ -1,3 +1,5 @@
+# Great work!
+
 # -*- coding: utf-8 -*-
 """Project04_Ngoc Yen.ipynb
 
@@ -12,9 +14,10 @@ import requests
 import pandas as pd
 from datetime import datetime
 
+
 def Automated_Crypto_Web_Scraper(url, crypto_cur):
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     }
     try:
         page = requests.get(url, headers=headers, timeout=10)
@@ -23,53 +26,63 @@ def Automated_Crypto_Web_Scraper(url, crypto_cur):
         print(f"Error loading page: {e}")
         return
 
-    soup = BeautifulSoup(page.content, 'html.parser')
+    soup = BeautifulSoup(page.content, "html.parser")
 
-    table = soup.find('table')
+    table = soup.find("table")
     if not table:
         print("Data table not found on the page.")
         return
 
-    rows = table.find_all('tr')
+    rows = table.find_all("tr")
 
     data_crypto = []
 
     for row in rows[1:]:
-        data = row.find_all(['th','td'])
+        data = row.find_all(["th", "td"])
 
         if len(data) < 9:  # Ensure enough data columns
             continue
 
-        name_crypto = data[2].find('p')
+        name_crypto = data[2].find("p")
         if name_crypto and name_crypto.get_text().strip() in crypto_cur:
             name = name_crypto.get_text().strip()
             price_value = data[3].get_text().strip()
             percent_1h = data[4].get_text().strip()
             percent_24h = data[5].get_text().strip()
             percent_7d = data[6].get_text().strip()
-            market_cap = data[7].find_all(['span'])[-1].get_text().strip() if data[7].find_all(['span']) else 'N/A'
-            volume_24h = data[8].find_all(['p'])[-1].get_text().strip() if data[8].find_all(['p']) else 'N/A'
+            market_cap = (
+                data[7].find_all(["span"])[-1].get_text().strip()
+                if data[7].find_all(["span"])
+                else "N/A"
+            )
+            volume_24h = (
+                data[8].find_all(["p"])[-1].get_text().strip()
+                if data[8].find_all(["p"])
+                else "N/A"
+            )
 
-            data_crypto.append({
-                "Cryptocurrency": name,
-                "Price": price_value,
-                "1h %": percent_1h,
-                "24h %": percent_24h,
-                "7d %": percent_7d,
-                "Market Cap": market_cap,
-                "Volume (24h)": volume_24h,
-                "Timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            })
+            data_crypto.append(
+                {
+                    "Cryptocurrency": name,
+                    "Price": price_value,
+                    "1h %": percent_1h,
+                    "24h %": percent_24h,
+                    "7d %": percent_7d,
+                    "Market Cap": market_cap,
+                    "Volume (24h)": volume_24h,
+                    "Timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                }
+            )
 
     if data_crypto:
         df = pd.DataFrame(data_crypto)
         print(df)
-        df.to_csv('crypto_data.csv', index=False)
+        df.to_csv("crypto_data.csv", index=False)
         print("Data has been saved to 'crypto_data.csv'")
     else:
         print("No data found for the specified cryptocurrencies.")
 
-crypto_cur = ['Bitcoin', 'Ethereum', 'BNB']
+
+crypto_cur = ["Bitcoin", "Ethereum", "BNB"]
 url = "https://coinmarketcap.com/"
 Automated_Crypto_Web_Scraper(url, crypto_cur)
-

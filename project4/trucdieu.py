@@ -1,3 +1,5 @@
+# Great work! But you should also parse the currencies' names because it currently contains the symbol of the currency.
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -13,10 +15,10 @@ soup = BeautifulSoup(response.content, "html.parser")
 # Find the relevant HTML elements and extract the data
 table = soup.find("table", class_="sc-7b3ac367-3 etbcea cmc-table")
 if table:
-    headers = [header.text for header in table.find_all('th')]
+    headers = [header.text for header in table.find_all("th")]
     rows = []
-    for row in table.find_all('tr')[1:]:
-        cells = row.find_all('td')
+    for row in table.find_all("tr")[1:]:
+        cells = row.find_all("td")
         cells = [cell.text.strip() for cell in cells]
         rows.append(cells)
 

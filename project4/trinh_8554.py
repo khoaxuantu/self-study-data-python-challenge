@@ -1,3 +1,5 @@
+# Great work! But you should also parse the currencies' names because it currently contains the symbol of the currency.
+
 # -*- coding: utf-8 -*-
 """trinh_8554_Project4.ipynb
 
@@ -16,24 +18,24 @@ page = requests.get(url)
 soup = BeautifulSoup(page.text, "html")
 print(soup)
 
-table = soup.find('table', "sc-7b3ac367-3 etbcea cmc-table")
+table = soup.find("table", "sc-7b3ac367-3 etbcea cmc-table")
 table
 
-headers = table.find_all('th')
+headers = table.find_all("th")
 column_names = [header.text.strip() for header in headers]
 print(column_names)
 
-rows = table.find_all('tr')[1:]
+rows = table.find_all("tr")[1:]
 table_data = []
 for row in rows:
-    cells = row.find_all('td')
+    cells = row.find_all("td")
     cell_data = [cell.text.strip() for cell in cells]
     table_data.append(cell_data)
 
 df = pd.DataFrame(table_data, columns=[column_names])
 df
 
-df = df.drop(['Circulating Supply', 'Last 7 Days'], axis=1)
+df = df.drop(["Circulating Supply", "Last 7 Days"], axis=1)
 df
 
-df_csv = df.to_csv('coinmarketcap.csv', index=False)
+df_csv = df.to_csv("coinmarketcap.csv", index=False)
