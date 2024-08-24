@@ -1,3 +1,6 @@
+# really, you publish your api key, dont do it again :D.
+# Nice work after all! You should handle the case where the currencies are not in the top 5 or the first page anymore. Also, you should save the dataframe to a csv file.
+
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
@@ -16,17 +19,17 @@ def fetch_data_from_api():
 
     if response.status_code == 200:
         data = response.json()
-        currencies = data['data'][:5]
+        currencies = data["data"][:5]
 
         # Tạo DataFrame chứa thông tin bảng dữ liệu
         df = pd.DataFrame(currencies)
-        df['Price'] = df['quote'].apply(lambda x: x['USD']['price'])
-        df['1h %'] = df['quote'].apply(lambda x: x['USD']['percent_change_1h'])
-        df['24h %'] = df['quote'].apply(lambda x: x['USD']['percent_change_24h'])
-        df['7d %'] = df['quote'].apply(lambda x: x['USD']['percent_change_7d'])
-        df['Market Cap'] = df['quote'].apply(lambda x: x['USD']['market_cap'])
-        df['Volume (24h)'] = df['quote'].apply(lambda x: x['USD']['volume_24h'])
-        df.drop(columns=['quote'], inplace=True)
+        df["Price"] = df["quote"].apply(lambda x: x["USD"]["price"])
+        df["1h %"] = df["quote"].apply(lambda x: x["USD"]["percent_change_1h"])
+        df["24h %"] = df["quote"].apply(lambda x: x["USD"]["percent_change_24h"])
+        df["7d %"] = df["quote"].apply(lambda x: x["USD"]["percent_change_7d"])
+        df["Market Cap"] = df["quote"].apply(lambda x: x["USD"]["market_cap"])
+        df["Volume (24h)"] = df["quote"].apply(lambda x: x["USD"]["volume_24h"])
+        df.drop(columns=["quote"], inplace=True)
 
         df['Rank'] = df['cmc_rank'].astype(str)
         df['Name'] = df['name']
@@ -34,15 +37,16 @@ def fetch_data_from_api():
         df = df[['Rank', 'Name', 'Price', '1h %', '24h %', '7d %', 'Market Cap', 'Volume (24h)']]
         df['Timestamp'] = pd.to_datetime('now').strftime("%Y-%m-%d %H:%M:%S.%f")
         return df
-
     else:
-        print(f'Error fetching data: {response.status_code}')
+        print(f"Error fetching data: {response.status_code}")
         return None
 
 while True:
     table_data = fetch_data_from_api()
     if table_data is not None:
-        print("Rank\tName\t\tPrice\t1h %\t24h %\t7d %\tMarket Cap\tVolume (24h)\tTimestamp")
+        print(
+            "Rank\tName\t\tPrice\t1h %\t24h %\t7d %\tMarket Cap\tVolume (24h)\tTimestamp"
+        )
         print("-" * 120)
         print(table_data)
     time.sleep(5)
