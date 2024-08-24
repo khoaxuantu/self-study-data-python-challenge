@@ -25,3 +25,6 @@ ENTER HERE:  ''')
         again()
 
 calculator()
+
+#Noice!! Beware to validate your inputs so your program don't crash when user input different value than int or float 
+#Keep up the good works!

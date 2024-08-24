@@ -49,3 +49,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+#You did a good job on this project! I think just some more work you can finish the others requirement for higher score. Keep it up!
+#Ah, just beware that limiting the decimal points of the results can cause some calculations not shown correctly. E.g: 0.001 + 2 => User can't do their calculations with numbers with many decimal points

@@ -40,3 +40,6 @@ while True :
     if(con == 'N'):
         print("SEE YOU AGAIN !!!!")
         break
+#Good work!!
+#Unfortunately it seems like you wasn't intended to keep the results after the first one for continuous calculating :(
+#Keep up the spirit!

@@ -41,3 +41,7 @@ elif operation == "D":
 
 else:
     print("Invalid Input")
+
+#Python is famous for many convinient built-in functions: float, int, eval.
+#You can look through other projects to improve yours. Feel free to ask us!
+#Good job!

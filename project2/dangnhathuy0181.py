@@ -32,3 +32,5 @@ while True:
     num2 = float(input("Enter number: "))
     print(f"Result: {num1} {opr} {num2} = {result(opr,num1,num2)}")
     num1 = result(opr,num1,num2)
+# % is refered to modulo which is the operation to get the remainder of division
+# Good job!

@@ -47,4 +47,6 @@ else:
     result = "Invalid operation"
 
 print("Result: ", result)
-
+#Nice work!
+#Our requirements for the 3rd bonus point require 
+# the program able to calculate an expression with different operation, try better next time!

@@ -58,3 +58,6 @@ while ope != '=':
     #In kết quả
     else:
         print(f'\nResult: {"("*(count-1)}{result_str} = {result}')
+#Nice job!
+#Python is famous for its large number of built-in functions!
+#In this project it is allowed to use the eval() function. I recommend looking through it!

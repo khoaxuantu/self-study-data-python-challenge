@@ -51,3 +51,8 @@ if choice in ('1', '2', '3', '4', '5', '6', '7'):
         print(f"{num1} là {percentage(num1, num2)}% của {num2}")
 else:
     print("Lựa chọn không hợp lệ.")
+
+#Sice we have our own requirement (please read the project #2 again), so making other operations like this doesn't count towards your grade.
+#Anyway, gud job on finishing this project! '
+#However, just to let you know, Python is famous for many convinient built-in functions: e.g: eval() and also other ways to think out of the box to finish this project.
+#I hope you can look through other projects to improve yours. Feel free to ask us!

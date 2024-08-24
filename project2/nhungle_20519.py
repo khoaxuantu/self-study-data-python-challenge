@@ -106,3 +106,5 @@ while q == 'Y':
     print("************************************************************************")
 else:
     print('Thanks for watching!!!')
+
+#Gudd job! You have a very creative approach in utilizing the eval() and create an "interactive" output.

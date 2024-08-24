@@ -66,3 +66,6 @@ while True:
             print("I said: Choose only available operators")
     except ValueError:
         print("wtf i said 'number'. can you read???")
+
+
+#Good job on finishing 2 requirements. Please using your words carefully!

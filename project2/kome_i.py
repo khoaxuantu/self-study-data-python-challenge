@@ -60,3 +60,5 @@ elif(choice == 'MD'):
 else:
     print("Please input a valid operator")
 
+#Gud job! But the 3rd requirement requires you to do more than 2 pairs of numbers with different operations. E.g: 5+2-8
+#Keep it up!

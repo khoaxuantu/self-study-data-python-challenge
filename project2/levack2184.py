@@ -49,3 +49,6 @@ def continous_calculation():
 continous_calculation()
 
 
+#Gud job! I saw you finish the 5th requirement but I can't gave you credit for that because it also requires the 3rd and 4th requirement to work.
+#another point is that I hope you can code more user-friendly code next time, which means a more thoughtful guide for user to use your program
+#Keep it up anyway!

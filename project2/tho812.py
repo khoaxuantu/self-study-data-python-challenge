@@ -36,3 +36,6 @@ def calculator():
             break
 
 calculator()
+
+#Good job!
+#Consider writing a calculation system (which use the ANS keyword to refer to the lastest result) for more user choices!

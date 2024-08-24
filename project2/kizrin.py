@@ -58,3 +58,5 @@ def calculator():
             break
 if __name__ == "__main__":
     calculator()
+
+#Gud job! Keep exploring the other ways to finish other requirements! I believe you will understand more about Python if you spend a little bit of time to look through others' projects with full score.

@@ -64,3 +64,5 @@ print("Grouped operations:", calc.calculate(expression2))
 calc.calculate("5 + 3")  # Initial calculation
 print("Continuous calc (add 4):", calc.continuous_calculation("+", 4))
 print("Continuous calc (multiply by 2):", calc.continuous_calculation("*", 2))
+#Good job!!
+#Consider making this program a input-output type!

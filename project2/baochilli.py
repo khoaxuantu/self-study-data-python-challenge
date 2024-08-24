@@ -14,3 +14,7 @@ try:
     print("Result: {} = {}".format(Expression, result))
 except:
     print("Error Expression!")
+
+#Good job!
+#However, beware of validiating input values. Eg: input value is string would crash the code
+# also division by zero case was not included.

@@ -20,3 +20,4 @@ while True:
             elif ask == "Y":
                 continue
         break
+#Good job! But beware to validate your inputs, it will be important in any project!

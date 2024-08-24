@@ -101,3 +101,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# The code shows inconsistent and duplications.
+# Eg: checking 0 in both functions (1 in main and 1 in each modulo, division)
+# Eg: Line 56 "type done to finish" but this feature doesn't exist, instead it depends on the statement at line 58. That probaly is causing confusion.

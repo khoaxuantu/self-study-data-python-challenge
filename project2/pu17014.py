@@ -45,3 +45,7 @@ while True:
         break
     cnt = 1
     previous_choice = choice
+
+#Good job on finishing this project! However, just note that our 4th requirement requires a full expression, e.g: you can write: (5+2)*8 at the same time.
+#Besides, the 5th requirement requires you to have an answer saved before calculating any further calculations
+#Feel free to ask us any questions, keep it up!!

@@ -1,7 +1,3 @@
-# Nice work! You did try to handle the errors may occur when using `eval()`, And because you used `eval()`, we also evaluate your work strictly.
-
-# Here, you have not handled the case when user entries a function in python, because `eval()` can execute any python code. For example, if user enters `print('test')`, your program still executes it and returns the result of `None`. You should the errors may occur when using `eval()` detailedly.
-
 import re
 
 
@@ -61,3 +57,7 @@ def caladd():
 
 if __name__ == "__main__":
     caladd()
+
+# Nice work! You did try to handle the errors may occur when using `eval()`, And because you used `eval()`, we also evaluate your work strictly.
+
+# Here, you have not handled the case when user entries a function in python, because `eval()` can execute any python code. For example, if user enters `print('test')`, your program still executes it and returns the result of `None`. You should the errors may occur when using `eval()` detailedly.
