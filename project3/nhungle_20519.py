@@ -106,3 +106,12 @@
  "nbformat": 4,
  "nbformat_minor": 5
 }
+
+#Please check your submission next time
+#Here are some points you can improve your code:
+'''
+Consider using shutil.move instead of shutil.copy if you want to move files rather than create copies. This would avoid duplication of files in different locations.
+You could introduce a default folder for unsupported file types to ensure all files are organized.
+Handle potential errors when copying files, such as permission issues or missing files, to make the script more robust.
+Use f-strings for more readable print statements when displaying dynamic content.
+'''

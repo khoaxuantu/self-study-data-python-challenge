@@ -22,3 +22,10 @@ loai_tep = {
 }
 thu_muc_goc = r'C:\Folder_goc'
 sap_xep(thu_muc_goc, loai_tep) #hay sap xep cac tep vao tung loai thu muc
+
+# Review:
+'''
+Error Handling: Implement error handling for file operations to handle cases where files cannot be moved due to permission issues or existing files.
+Efficiency: Optimize the process by checking for existing folders (os.path.exists()) only once for each file type rather than within the loop.
+Case Sensitivity: Ensure the file extension check is case-insensitive by consistently converting the extensions to lowercase.
+'''

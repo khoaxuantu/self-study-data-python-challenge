@@ -37,3 +37,11 @@ def organize_files(source_dir):
 # Usage
 source_directory = '/path/to/your/directory'
 organize_files(source_directory)
+
+#Review:
+'''
+Here are some points you can improve your code:
+- Pathlib Usage: Since you imported Path from the pathlib module, you might consider using it more extensively throughout the script for consistency.
+- Handling Name Conflicts: If a file with the same name already exists in the destination folder, the current script will overwrite it. You might want to handle such conflicts by renaming the file or skipping it.
+- Error Handling: While the script is robust, adding some basic error handling (e.g., try-except blocks) could make it more resilient, especially when dealing with file operations that might fail.
+'''

@@ -43,4 +43,11 @@ while True:
   try:
     sort_oldfile (user_input.strip ())
   except:
-    print ("Please enter correct file path.\n") 
+    print ("Please enter correct file path.\n")
+
+# Review:
+'''
+Good job on completing the project. However, there's some improvement you can look through to improve your code:
+Here, you let the user decide which file to sort, but our project would recommend to sort a whole folder instead of file by file. Therefore you need some functions to check the extensions and organize the
+files based on their extension. E.g: Documents: .pdf, .txt, etc
+'''

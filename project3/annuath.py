@@ -31,3 +31,10 @@ def organize_files():
 
 if __name__ == "__main__":
     organize_files()
+    
+# Review:
+# Good job on completing this project, you nailed it! Here are only some small points you can consider to improve your code
+'''
+Handling Unknown File Types: Currently, files with extensions not listed in folders remain in the source directory. You might want to add a catch-all category like "Others" to handle these.
+Including print statements or logging could help track the files being moved, which is useful for monitoring or debugging.
+'''

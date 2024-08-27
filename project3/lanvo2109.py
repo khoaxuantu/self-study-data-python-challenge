@@ -12,9 +12,9 @@ FILE_TYPES = {
 }
 
 # Day la thu muc chua cac file can sap xep
-SOURCE_DIR = r'D:\Python\source'
+SOURCE_DIR = r'D:\Test proj 3'
 
-DEST_DIR = r'D:\Python\sorted'
+DEST_DIR = r'D:\Test proj 3'
 if not os.path.exists(DEST_DIR):
     os.makedirs(DEST_DIR)
 
@@ -33,4 +33,12 @@ for filename in os.listdir(SOURCE_DIR):
         if not os.path.exists(dest_folder_path):
             os.makedirs(dest_folder_path)
         shutil.move(file_path, os.path.join(dest_folder_path, filename))
+
+# Review:
+# Here are some points you can consider to improve your code:
+'''
+Error Handling: Consider adding try-except blocks around critical operations like file moving and directory creation. This can help manage unexpected errors, such as permission issues or files that can't be moved.
+Handling Case Sensitivity: While file extensions are generally consistent, it's possible to encounter mixed-case extensions. Applying .lower() to file_ext can ensure all cases are handled uniformly.
+Handling Duplicate Files: If a file with the same name already exists in the destination folder, the script will raise an error. You might want to check for duplicates and rename the file or skip it to avoid overwriting.
+'''
 

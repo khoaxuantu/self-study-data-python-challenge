@@ -52,3 +52,13 @@ if __name__ == '__main__':
     # Thư mục cần xử lý
     directory_path = r'D:\Python Challenge\Day 24'
     categorized_files = categorize_files_by_type(directory_path)
+
+
+# Review:
+# Here are some points you can consider to improve your code:
+'''
+The create_append function can be simplified by removing the redundant if-else condition. The directory creation and file movement can happen sequentially without checking for the directory's existence twice.
+The os.makedirs(new_folder_path, exist_ok=True) ensures that the directory is created if it doesn't exist, making the code cleaner.
+Currently, your script assumes that every file has an extension. It's a good idea to handle cases where files might not have an extension.
+You might want to allow the user to specify the output directory instead of using the current working directory. This would make your script more flexible.
+'''

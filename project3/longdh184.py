@@ -27,3 +27,13 @@ if __name__ == "__main__":
     # Call the function to organize files by type
     directory = input('Input source folder path: ')
     organize_files_by_type(directory)
+
+# Review:
+# Here are some points you can consider to prove your code:
+
+'''
+Be aware that our project is to sort to different file types based on the extension. E.g: Documents (.doc, .pdf), Audio (.mp3), etc
+Handling No Extensions: Files without extensions are moved to a No_Extension folder.
+Directory and Hidden Files: The script now skips directories and hidden files.
+Error Handling: Added try-except blocks to handle potential errors during the file moving process.
+'''

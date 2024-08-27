@@ -25,3 +25,12 @@ def sort(path):
 
 link="C:/Users/ADMIN/OneDrive/Desktop/Data Analyst/Khóa học Python/Python turtorial/Project 3"
 sort(link)
+
+# Review:
+# here are some points you can consider to improve your code:
+'''
+Consider using ext.lower() to handle extensions in different cases (e.g., .JPG vs. .jpg).
+Instead of multiple if-elif statements, consider using a dictionary to map extensions to their categories. This will make your code more scalable and easier to update.
+You might want to add a try-except block around the file operations to handle any potential errors, such as permission issues.
+Adding a print statement at the end of the sorting process can help users confirm that the operation completed successfully.
+'''

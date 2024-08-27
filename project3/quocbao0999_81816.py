@@ -72,6 +72,17 @@ while True:
     except Exception as er:
         print (f"\nError: {er}. Please try again!\n")
 
+# Review:
+'''
+0. In this project, you did create a sorting files script. However, we want you to sort a folder with given files into seperated folders with each a different file types.
+Therefore, we have to minus you 1 points for not aligning with the projects requiremnt. Sorry for that. Here are other things you can improve your code:
+1. Extension Mapping:
+The folder_file dictionary is static, which is fine, but you could consider allowing the user to define additional file types and their corresponding folders dynamically, making the script more flexible.
+Also, to handle extensions more robustly, you can store extensions in lowercase and use .lower() when comparing them to avoid case sensitivity issues.
+2. Error Handling:
+Improve error handling for cases where the user might input invalid paths, non-existent directories, or unsupported file types. Consider adding custom error messages or even try-except blocks around critical sections of the code.
+'''
+
         
     
 

@@ -47,3 +47,10 @@ def organize_files(source_dir):
 # Example usage:
 source_directory = r"C:\Users\trucdieu\PJ3"
 organize_files(source_directory)
+
+
+# Review:
+# Areas to improve:
+
+# File Extension Handling: Ensure that file extensions are consistently converted to lowercase to avoid issues with case sensitivity.
+# Error Handling: The script handles errors during file movement, which is excellent. You might consider logging or handling specific exceptions for more detailed error analysis.

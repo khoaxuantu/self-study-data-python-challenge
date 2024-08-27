@@ -80,6 +80,19 @@ def move_files_based_on_extension():
 # Gọi hàm vừa tạo để di chuyển files tự động dựa trên phần mở rộng của files
 move_files_based_on_extension()
 
+# Review: Here are some points you can improve for your code!
+'''
+1. Context Manager Usage:
+You've correctly used a context manager with @contextmanager to move files, ensuring that the file movement operation is performed at the end of the block. This is a good use of context managers for handling file operations safely.
+2. Handling Edge Cases:
+If a file already exists in the destination folder with the same name, the current code will overwrite it. If this behavior is not desired, you may want to add a check to rename the file before moving it.
+3. Improved Error Handling:
+The current setup handles known file types well, but for unknown file types, it only prints a message. You might want to log these unknown files or handle them differently.
+4. Optimization Tip:
+Instead of using multiple if-elif conditions to match file extensions, you could use a dictionary to map extensions to folders, similar to how you map folder names in the folders dictionary. This would make the code more scalable and easier to manage.
+5. Code Readability:
+Your code is already quite readable, but adding more comments explaining each section (e.g., for less experienced readers) could be beneficial. You might also consider using consistent naming conventions, such as using target_folder instead of just folder for clarity.
+'''
 
 # In[ ]:
 

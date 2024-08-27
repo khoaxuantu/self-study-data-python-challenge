@@ -39,3 +39,17 @@ def sort_files(source_dir, dest_dir):
 source_directory = "path/..."
 destination_directory = "path/..."
 sort_files(source_directory, destination_directory)
+
+#Review:
+'''
+1. Handling Existing Files:
+If a file with the same name already exists in the destination folder, shutil.move will raise an error. You might want to handle this by renaming the file or skipping it.
+2. Empty Directory Check:
+Consider checking if the source_dir is empty before starting the operation to save processing time.
+3. Case Insensitivity:
+Extensions are already being normalized to lowercase, which is good for handling case variations.
+4. Edge Cases:
+Ensure that symbolic links, hidden files, or system files are handled appropriately (if necessary).
+5. Performance:
+If you're dealing with a large number of files, you might want to look into more efficient file handling techniques, but for moderate use cases, your current approach should work well.
+'''

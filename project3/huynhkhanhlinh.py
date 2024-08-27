@@ -6,7 +6,7 @@ Project 3 from huynhkhanhlinh
 import os
 import shutil
 
-path = '/Users/macos/Downloads'
+path = r'D:\Test proj 3 - Copy'
 
 file_types = {
     'Images': ['.jpg', '.jpeg', '.png', '.heic'],
@@ -35,3 +35,7 @@ def sort_files():
 
 if __name__ == '__main__':
     sort_files()
+
+# Review:
+
+# To enhance your code further, consider adding error handling to manage potential exceptions during file operations, such as permission errors or files that may already exist in the destination folder.

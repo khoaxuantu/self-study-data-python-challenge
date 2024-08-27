@@ -78,3 +78,12 @@ def solve():
 
 if __name__ == "__main__":
     solve()
+
+# Review:
+# Gud job on completing the project, here are some points you can consider improving your code:
+'''
+Combining Operations: The sorting operation on guide_dict could be done once when creating the dictionary, rather than iterating through it again after populating it.
+File Operations: Implement error handling for file operations like os.rename and os.mkdir. This will make the code more robust, especially when dealing with permission issues or existing files/folders.
+Path Validity: Ensure that the paths used are valid and accessible. Adding checks before performing file operations can prevent runtime errors.
+Be aware that our project is to sort to different file types based on the extension. E.g: Documents (.doc, .pdf), Audio (.mp3), etc
+'''

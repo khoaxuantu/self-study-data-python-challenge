@@ -34,3 +34,11 @@ for filename in os.listdir(source_folder):
             destination = 'Others'
         
         shutil.move(file_path, os.path.join(destination, filename))
+
+#Good job on completing this project:
+#However, here are some points you can improve your code:
+'''
+Consider using os.makedirs(destination, exist_ok=True) directly in the move process to avoid repetition.
+Ensure handling of files without extensions or those with uncommon extensions. (You may use try/except)
+You might want to move all the files into a designated directory, rather than leaving some in the source directory if they don't match known types.
+'''

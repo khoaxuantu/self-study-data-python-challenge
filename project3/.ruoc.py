@@ -24,3 +24,10 @@ for file in files:
     except Exception as e:
         print(e)
 print("Please check the result in the folder 'sort_file_project'")
+
+#Review:
+'''
+Check File Extension Robustly: Use os.path.splitext to handle cases where files may not have an extension.
+Error Handling: Improve the exception handling to provide more informative messages.
+And remember that out project would require you to sort files into different file types. E.g: Documents: .pdf, .txt; Audio: .mp3, .av
+'''

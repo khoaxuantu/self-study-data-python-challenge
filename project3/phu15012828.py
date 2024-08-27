@@ -26,3 +26,10 @@ def organize_files(directory):
 directory = 'Project directory'
 organize_files(directory)
 print("File organization complete.")
+
+# Review:
+# Good job on completing this project:
+'''
+Add error handling for cases where a file cannot be moved (e.g., due to permissions issues or the file being in use). This would make the script more robust.
+Catch-All Folder: If a file does not match any predefined category, it is currently placed in a folder named after its extension. While this is a functional approach, creating a dedicated "Uncategorized" or "Others" folder might provide a clearer structure.
+'''

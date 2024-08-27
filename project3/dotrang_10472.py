@@ -30,3 +30,10 @@ for filename in os.listdir(source_dir):
         print(f"File {filename} cannot be moved because it is not of the defined type.")
 
 print("Complete file arrangement.")
+
+# Review:
+'''
+Avoid Duplicate Extensions: In the file_types dictionary, the 'Audio' key has '.wav' listed twice. Consider removing the duplicate to ensure consistency.
+Handle Non-Movable Files: When a file does not match any defined type, instead of just printing a message, you could create an "Others" folder in the destination directory and move unmatched files there.
+Add error handling around the shutil.move operation to catch and report issues such as permission errors or if a file is already in use.
+'''

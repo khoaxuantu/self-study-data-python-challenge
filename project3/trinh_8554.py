@@ -28,7 +28,7 @@ directories = {
 }
 
 for dir in directories.values():
-    os.makedirs(dir, exist_ok=True)
+    os.makedirs(dir, exist_ok=True) #Why you continue to create more folders here?
 
 for file in list_file:
     extension = file.split('.')[-1].lower()
@@ -44,3 +44,9 @@ for file in list_file:
             print(f"Error moving {file}: {e}")
 
 print("All files have been processed.")
+
+# Area to improve:
+# This project should handle any files that have the extension belongs to a specific file types. For example: .mp4, .mov belongs to the Video File Types
+# Directory Names: Ensure that the directory names in your directories dictionary match those created in your script. For example, 'IMAGE_FILE' is created, but the dictionary uses 'IMAGE'. => Kinda confuse here because you create the folder twice, but not entirely correct btw, extension .zip is in TXT_file?
+# Handling Existing Files: If the directories already exist, os.makedirs will not overwrite them, but it might cause confusion if not handled properly. Your current script does not handle pre-existing files or directories which might be helpful to avoid errors.
+# Error Handling: The FileNotFoundError exception will not be raised here as shutil.move would create the target directory if it does not exist. Instead, general exception handling is appropriate for unforeseen issues during file operations.

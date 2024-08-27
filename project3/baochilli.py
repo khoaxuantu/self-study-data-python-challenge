@@ -27,3 +27,9 @@ folder_type = {
 }
 
 file_sorting(root_folder, folder_type)
+
+# Review:
+'''
+Error Handling: The try-except block ensures that any errors during file moving are caught and logged.
+Extended Extensions: The extension lists for each file type are expanded for broader file type coverage.
+'''

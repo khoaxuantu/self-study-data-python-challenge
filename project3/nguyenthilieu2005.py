@@ -40,3 +40,18 @@ for file in files:
     else: 
         move(file, others_dir+"/"+file) 
 # Before running the script, change the directory to Downloads by typing 'cd Downloads' in the terminal.
+
+# Review:
+# Good job on completing this project:
+# Here are some points you can look through to improve your code:
+'''
+File Path Issues: The script assumes the working directory is Downloads. However, in the os.listdir(root_dir) loop, it lists files without full paths. When moving files, it might fail unless the current working directory is set to Downloads. Consider using os.path.join(root_dir, f) to construct the full path.
+
+Error Handling: Add error handling (e.g., using try-except) to manage potential issues like permission errors or non-existing files during the move operation.
+
+Directory Creation: Before moving files, check if the destination directories (documents_dir, image_dir, etc.) exist, and create them if they don't using os.makedirs(destination_dir, exist_ok=True).
+
+String Concatenation: When moving files, instead of using "+", use os.path.join() to construct paths, which makes the code more robust and platform-independent.
+
+File Overwriting: The script currently overwrites files if a file with the same name exists in the destination directory. You might want to add a check to avoid overwriting or rename files if they already exist.
+'''

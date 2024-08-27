@@ -39,3 +39,11 @@ for file_name in lst_file:
 print("Các tệp đã được phân loại!")
 
 
+# Review:
+# Good job on completing this project, here are some points to improve it:
+'''
+Hidden Files: Ensure that hidden files or files without extensions are handled or reported.
+Duplicate Files: Consider handling cases where files with the same name might be moved to the same folder.
+Handle Different File Types: Include a category for unrecognized file types to avoid silently ignoring files that do not match any listed extensions.
+Exception Handling: Including try-except blocks around critical operations (like moving files) could help gracefully handle unexpected errors such as permission issues or read/write errors.
+'''

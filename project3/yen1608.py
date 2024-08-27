@@ -64,6 +64,8 @@ print("Quá trình sắp xếp đã hoàn tất.")
 
 # In[ ]:
 
-
+# Great work on making the file sorter interactive and user-friendly by asking for a valid directory path. Your approach to handling various file types and using Path for directory management is clean and effective.
+# Areas to improve:
+# Consider adding an option to create a folder for unrecognized file types instead of just printing a message. This would make the script more comprehensive.
 
 

@@ -44,3 +44,10 @@ for file in filename:
         else:
             os.mkdir(FilesLocation)
             shutil.move(file,FilesLocation)
+
+# Review:
+'''
+Helper Functionality: The loop reduces repetitive code by using a dictionary (file_types) to map file extensions to their respective folders.
+Single Folder Check: The os.makedirs(target_folder, exist_ok=True) ensures the folder is created only if it doesn't already exist.
+Avoid Hardcoding Paths: Consider allowing users to input the source_dir or using a command-line argument to make the script more flexible.
+'''

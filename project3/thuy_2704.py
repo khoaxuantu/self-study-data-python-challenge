@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1mx_ielpC2Wgpl--PQirptt0jmeJff8ek
 """
 
-!pip install gdown
+#!pip install gdown
 
 import os
 import shutil
@@ -51,3 +51,8 @@ for filename in os.listdir(destination_folder):
                 break
 
 print("Tệp đã được sắp xếp thành công!")
+
+# Good job on completing this project:
+# Here are some areas you can consider to improve:
+# Error Handling: Adding error handling for scenarios where files might not download correctly or where the move operation might fail due to permissions or file conflicts could make the script more robust.
+# Efficiency: Consider optimizing the script to handle large numbers of files or large file sizes, as performance can become an issue with extensive file operations.

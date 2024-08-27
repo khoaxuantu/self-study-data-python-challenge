@@ -45,7 +45,11 @@ for file in file_name:
     elif ".zip" in file and not os.path.exists(path + "Zipped Files\\" + file):
         shutil.move(path + file, path + "Zipped Files\\" + file)
 
+# Areas to improve:
 
+# Path Concatenation: Using os.path.join for path concatenation is recommended for better cross-platform compatibility and readability. Replace manual concatenation (e.g., path + "JPG Files\\" + file) with os.path.join(path, "JPG Files", file).
+# File Extension Handling: The script checks for substrings like .jpg in filenames, which might not correctly handle files with extensions like .jpeg or .docx. Consider using os.path.splitext to accurately extract and match file extensions.
+# Error Handling: Adding error handling would make the script more robust. For example, handle cases where moving files might fail due to permissions or other issues.
 # In[ ]:
 
 

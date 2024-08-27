@@ -52,3 +52,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Review:
+# Good job on completing this project, however, just some small points you can consider on your future project:
+'''
+Consider adding error handling for file operations (like shutil.move) to catch and report issues such as permission errors or files that can't be moved.
+Adding print statements or logging to inform the user about each file being moved could be helpful for larger directories to track progress.
+'''

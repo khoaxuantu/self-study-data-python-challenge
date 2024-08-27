@@ -45,3 +45,10 @@ else:
     print('Files have been sorted.')
   except Exception as e:
     print(f"An error occurred: {e}")
+
+# Review:
+# Here are some points to improve your code:
+'''
+Consider adding checks for cases where the file extension is not recognized or where files without extensions might exist. You could create a separate folder (e.g., Others) for such cases.
+The get_file_extension function is clear, but you could enhance it slightly by using Python’s built-in os.path.splitext() method, which returns the file extension directly.
+'''
