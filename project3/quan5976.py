@@ -33,3 +33,11 @@ def sap_xep_tep():
 
 # Gọi hàm sap_xep_tep để tổ chức các tệp
 sap_xep_tep()
+
+# Review:
+'''
+1. Error Handling:
+Implement error handling for cases where files can't be moved (e.g., permission issues, files already existing in the destination) to make the script more robust.
+2. File Overwriting:
+The script currently overwrites files with the same name in the destination directory. Adding logic to handle duplicates, such as renaming or skipping, would be beneficial.
+'''

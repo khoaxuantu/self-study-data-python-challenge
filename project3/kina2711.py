@@ -50,3 +50,6 @@ if not os.path.isdir(source_directory):
     print('Not a valid directory.')
 else:
     categorize_files(source_directory)
+
+# Review:
+# Well-done on this project. You nailed it!!!

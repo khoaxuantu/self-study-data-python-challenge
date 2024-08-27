@@ -124,9 +124,16 @@ shutil.move(path + r"\NewFile.tsv", path + r"\text\written\tsv")
 
 shutil.move(path + r"\FakeFile.csv", path + r"\text\empty")
 
-
+ 
 # In[ ]:
 
-
+# Review:
+# Here are some points you may consider to improve your code next time:
+'''
+Next project, consider making them parameters or reading them from a configuration file. This will increase flexibility and reduce the need to modify the code directly.
+You use path + r"\folder" to construct paths. It's better to use os.path.join() to create paths as it ensures compatibility across different operating systems (e.g., Windows vs. Unix-based).
+Add error handling to manage cases where the file to be moved doesn't exist or when there are permission issues. This will make your script more robust.
+Instead of manually creating directories for each category, consider defining a structure in a dictionary and using a loop to create directories. This approach reduces redundancy and makes it easier to adjust the folder structure in the future.
+'''
 
 

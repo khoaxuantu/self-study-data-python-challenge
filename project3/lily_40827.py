@@ -162,3 +162,9 @@ response=requests.get(exe_url)
 with open(exe_path,'wb') as file:
     file.write(response.content)
 
+# Review:
+# Good job on completing this project, here are some points you can consider to improve your code:
+'''
+General Functions: Created helper functions like create_directory() and download_file() to avoid repetitive code.
+Error Handling: Added basic error handling for file downloads.
+'''

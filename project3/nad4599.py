@@ -2,7 +2,7 @@ import os
 import shutil
 
 # Define the source directory
-source_dir = "./project34"
+source_dir = "D:\\Test proj 3"
 # Check if the source directory exists
 if not os.path.exists(source_dir):
     print(f"Error: The source directory '{source_dir}' does not exist.")
@@ -51,3 +51,10 @@ for file_name in os.listdir(source_dir):
             print(f"Moved {file_name} to {target_dir}")
 
 print("File sorting completed.")
+
+# Review:
+# Good job on completing this project, here are some points you can look through to improve it:
+'''
+Currently, files with extensions not listed in your file_types dictionary are ignored. You might want to handle these cases, either by placing them in a separate "Others" folder or by printing a message to notify that the file type is not recognized.
+If two files have the same name but different extensions, one will overwrite the other in the target folder. You might consider renaming files if a duplicate is found to prevent data loss.
+'''

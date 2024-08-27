@@ -18,3 +18,10 @@ def sorting_file():
         shutil.move(file_name, type_file)
 
 sorting_file()
+
+# Review:
+'''
+Use os.path.splitext: This function is more reliable for getting file extensions and handles filenames without extensions.
+Error Handling: Add exception handling for better robustness.
+And remember that out project would require you to sort files into different file types. E.g: Documents: .pdf, .txt; Audio: .mp3, .av rather than sort it based on the file extension
+'''

@@ -64,3 +64,10 @@ def sort_files(dir):
 # Test run. Enter your own source directory
 source_dir = r"C:/Users/admin/OneDrive/Documents/Python_practice/Project 3/"
 sort_files(source_dir)
+
+# Review:
+'''
+Remember to also include your imported library next time
+Handling Other File Types: The current implementation handles unsupported file types by simply printing a message. You might want to move these files to a general "Other" folder instead.
+Improving Readability: Use os.path.join() instead of manually concatenating directory paths with +. It makes the code more readable and ensures compatibility across different operating systems.
+'''

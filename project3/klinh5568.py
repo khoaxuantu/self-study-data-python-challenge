@@ -36,3 +36,10 @@ for item in os.listdir(source_directory):
             print(f"Tập tin không được nhận dạng: {item}")
 
 print("Tập tin đã được tổ chức thành công.")
+
+# Review
+# Good job on completing the project, here are some points you may consider to improve your code:
+'''
+The way you extract the file extension (file_extension = '.' + item.split('.')[-1].lower()) works fine, but os.path.splitext(item)[1].lower() is a more robust method, especially for files with multiple dots in their names.
+Instead of just printing a message for unrecognized file types, you might consider moving them to a separate folder (e.g., "Others"). This way, all files are organized, and you can later review which files were not categorized.
+'''

@@ -1,5 +1,5 @@
 import os, shutil
-path = r"G:/python/Project 3/"
+path = r"D:\\Test proj 3\\"
 file_name=os.listdir(path)
 folder_names = ['videos','image files','documents','compressed files','audio files','executable files']
 for loop in range(0,6):
@@ -21,3 +21,10 @@ for file in file_name:
 
         
 print("All files have been successfully moved.")
+
+# Review:
+'''
+Path Handling: Used os.path.join() to construct file paths.
+Case Insensitivity: Converted file extensions to lowercase to handle case variations.
+Folder Creation: Created folders with os.makedirs() and ensured they exist.
+'''

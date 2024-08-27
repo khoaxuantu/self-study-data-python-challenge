@@ -94,4 +94,12 @@ for file in lst_file:
 	elif ext in ['exe'] and not os.path.exists(path_taget +'\\executable files\\'+file): 
 		shutil.move(path_from +'\\'+ file, path_taget +'\\executable files\\'+file)
 	else:
-		print(f'''  \033[34m"{file}"\033[0m trùng với một file đã được phân loại trước đó.\n''')       
+		print(f'''  \033[34m"{file}"\033[0m trùng với một file đã được phân loại trước đó.\n''')
+
+# Review:
+# Gud job on completing this project so! Nice guide for the user btw, however, consider these areas so that you can improve your code:
+# Path Handling: Instead of using string concatenation like path_taget +'\\'+ folder_names[folder], consider using os.path.join(path_taget, folder_names[folder]) for better cross-platform compatibility.
+# Error Handling: While your script identifies files that don't have extensions or unrecognized extensions, adding error handling for scenarios like permission issues or other unexpected errors during file operations would improve its robustness.
+# Optimization: You might consider refactoring the multiple if-elif statements for file extension checking into a dictionary lookup or another data structure for more efficient code.
+# You can let the user input their desired path in the input as well, if you want to make it more user-friendly.
+# Keep it uppp!!

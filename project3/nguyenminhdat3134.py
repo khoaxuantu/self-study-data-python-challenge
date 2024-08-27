@@ -40,3 +40,10 @@ if __name__ == "__main__":
     Create_Folder(direct_path)
     organize_files(direct_path)
     print("Files have been organized.")
+
+# Review:
+# Good job on completing this project, here are some points you can look through to improve it :3
+'''
+Exception Handling: Including try-except blocks around critical operations (like moving files) could help gracefully handle unexpected errors such as permission issues or read/write errors.
+If a file with the same name already exists in the destination folder, shutil.move() will overwrite it. Adding logic to handle such cases (e.g., renaming the file or skipping the move) could prevent data loss.
+'''

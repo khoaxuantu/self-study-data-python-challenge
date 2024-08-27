@@ -34,3 +34,11 @@ for file_name in os.listdir(directory):
     if file_type:
         dest_path = os.path.join(directory,file_type,file_name)
         shutil.move(file_path,dest_path)
+
+# Review:
+# Here are some ponits you can consider to improve your code:
+'''
+Handling Unrecognized File Types: The get_file_type function returns "others" for unrecognized file types, but the code doesn't create or move files to an "others" directory. Consider adding this functionality to handle miscellaneous files.
+Error Handling: Adding error handling (e.g., try-except blocks) can help manage issues like permission errors or files already existing in the destination folder.
+Case Sensitivity: You're already using tail.lower() to handle case sensitivity, which is great. Just ensure that the extension list (file_types) is comprehensive to avoid missing any files.
+'''

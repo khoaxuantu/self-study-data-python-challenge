@@ -27,3 +27,11 @@ while True:
         break
     else:
         print("ERROR! Invalid directory path.")
+
+# Review:
+'''
+Error Handling: Add error handling for potential issues during file operations, such as permission errors or files that already exist in the destination folder.
+Edge Cases: Consider handling files without extensions or with uncommon extensions not listed in file_types.
+User Experience: Enhance the user experience by allowing the program to retry if the directory path is invalid, instead of exiting the loop.
+Code Efficiency: The code could be more efficient by checking if the destination folder exists outside the loop, reducing redundant os.path.exists() and os.makedirs() calls.
+'''

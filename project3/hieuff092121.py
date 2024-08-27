@@ -15,3 +15,9 @@ for file_name in list_files:
         os.mkdir(path+tmp)
         shutil.move(path + file_name, path + tmp + '/' + file_name)
         list_folder.append(tmp)
+# Review:
+'''
+Safe File Extension Handling: Use a check to ensure that the file has an extension before trying to split it.
+Path Construction: Use os.path.join() to construct paths instead of string concatenation.
+Handling File Conflicts: Implement logic to handle situations where a file with the same name already exists in the target folder, either by renaming the file or by skipping the move operation.
+'''

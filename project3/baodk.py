@@ -69,3 +69,10 @@ def file_sorting():
 
 if __name__ == '__main__':
 	file_sorting()
+
+# Review:
+# Good job on completing this project, you nailed it, here are some points you can consider to improve your code:
+'''
+Consider using os.path.join() for constructing file paths, which handles different path separators across operating systems. This will make the code more portable.
+Instead of listing all files and then filtering them, you could directly filter files using os.scandir() which might be more efficient, especially in directories with a large number of files.
+'''

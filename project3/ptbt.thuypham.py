@@ -38,3 +38,10 @@ def organize_files_by_type(directory):
 directory = 'path/to/your/directory'
 #r'D:\NGOC NUOC\DATA\drive-download-20240804T050040Z-001'
 organize_files_by_type(directory)
+
+# Review:
+'''
+1. File Exists Handling: If a file with the same name already exists in the destination folder, it could be overwritten. Consider implementing logic to rename the file or skip the move to avoid overwriting.
+2. Catch-All Folder: If a file does not match any predefined category, it is currently placed in a folder named after its extension. While this is a functional approach, creating a dedicated "Uncategorized" or "Others" folder might provide a clearer structure.
+3. Summary Output: After organizing the files, providing a summary of the number of files moved to each category would be helpful for users to understand what was done.
+'''

@@ -37,3 +37,9 @@ for file in os.listdir('.'):
     
         
     # if not os.path.exists
+
+# Review:
+'''
+Avoid Duplicate Directory Creation: Instead of checking if the directory exists and creating it inside each if block, consider creating a dictionary to map file extensions to folder names. This would reduce repetitive code and make it easier to add or modify file types in the future.
+Handle Unmatched Files: Consider adding a catch-all folder (like "Others") for files that don't match any specified extensions. This ensures that all files are moved and none are left behind.
+'''

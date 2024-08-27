@@ -75,3 +75,11 @@ if __name__ == "__main__":
  
             # organize the file
             organize_file(file_path, "")
+
+# Review:
+'''
+Path Handling: Using os.path.join() for better cross-platform compatibility.
+Error Handling: Added checks to ensure files and directories exist.
+User Input Validation: Improved user input handling and validation.
+Output Messages: Clearer output messages for better user feedback.
+'''

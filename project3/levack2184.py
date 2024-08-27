@@ -49,3 +49,10 @@ if __name__ == "__main__":
     source_directory = r'C:\Users\Admin\Downloads\Project 3-20240804T055426Z-001\Project 3'
     sort_files(source_directory)
 
+# Review:
+# Here are some points you can look through to improve your code:
+'''
+The source directory is hardcoded as r'C:\Users\Admin\Downloads\Project 3-20240804T055426Z-001\Project 3'. You may want to allow user input or use a file dialog to select the directory dynamically.
+The file extension comparison is case-insensitive due to the use of .lower(), which ensures consistency when matching extensions.
+Handling Unrecognized File Types: If you want to handle files that don't match any predefined categories, you could add them to a "Miscellaneous" or "Other" folder.
+'''

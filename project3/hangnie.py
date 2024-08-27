@@ -22,3 +22,11 @@ for file in file_names:
         shutil.move(path+file, path+'Document File\\'+file)
     elif '.rar' in file and not os.path.exists(path+'Compressed File\\'+file):
         shutil.move(path+file, path+'Compressed File\\'+file)
+
+# Review:
+'''
+Avoid Repetition: Instead of manually checking each file extension and moving it to the corresponding folder, you can use a dictionary to map extensions to their respective folders. This will make the code cleaner and easier to update.
+Use of os.path.join: Rather than concatenating strings with +, use os.path.join to construct file paths. This approach is more robust and portable across different operating systems.
+Error Handling: Adding error handling for scenarios where the file might not exist or the move operation might fail would make your script more reliable.
+Dynamic Extension Handling: Using a dictionary to map file extensions to folder names allows you to easily add or change file types and their destinations without modifying multiple parts of your code.
+'''

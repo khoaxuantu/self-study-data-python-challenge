@@ -37,3 +37,11 @@ for file in files:
         shutil.move(path + file, path + 'PNG_fol/' + file )
     elif '.jpg' in file and not os.path.exists(path + 'JPG_fol/' + file):
         shutil.move(path + file, path + 'JPG_fol/' + file )
+
+# Review:
+# Your script effectively creates files and sorts them into appropriate folders, demonstrating a clear understanding of file operations and folder management.
+# Areas to improve:
+# Path Concatenation: Use os.path.join to handle path concatenation. This improves readability and ensures compatibility across different operating systems. For example:
+# os.path.join(path, 'CSV_fol', file)
+# File Creation Mode: Using mode 'x' with open raises an error if the file already exists. If your intention is to create new files, consider using mode 'w', which will create the file if it doesn’t exist or overwrite it if it does.
+# Check for Existing Files: In the file movement section, the check not os.path.exists(path + 'CSV_fol/' + file) is redundant because the shutil.move function will handle files that are already in the destination. You can simplify this by directly moving the files.

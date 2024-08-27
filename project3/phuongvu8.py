@@ -65,5 +65,14 @@ for files in video_file:
 for files in csv_file:
     if not os.path.exists(csv_dest): 
         os.makedirs(csv_dest)
-    shutil.move(files,csv_dest) 
+    shutil.move(files,csv_dest)
+
+# Review:
+# Here are some points to increase your code:
+'''
+1. Optimization of Directory Creation:
+Instead of checking and creating the destination directory within each loop, consider creating all necessary directories at the beginning of the script. This will reduce redundant checks and make the code cleaner.
+2. Add error handling for cases where a file cannot be moved (e.g., due to permissions issues or the file being in use). This would make the script more robust.
+3. The script currently handles one file type at a time. You could consolidate the logic for handling file movements into a single loop to avoid repetition and improve efficiency.
+'''
  

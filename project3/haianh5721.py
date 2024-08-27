@@ -66,8 +66,15 @@ print("done")
 
 # Sử dụng hàm
 
-input_directory = 'link to project 3'
+input_directory = r'D:\Test proj 3'
 
-output_directory = 'link to project 3 '
+output_directory = r'D:\Test proj 3'
 
 organize_files(input_directory, output_directory)
+
+#Review:
+'''
+Enhanced Output: Added print statements to show file movement actions.
+Path Handling: Ensure to use raw string literals or escape characters for Windows paths.
+Directory Check: Added checks to verify that the directories exist before proceeding.
+'''

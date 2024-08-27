@@ -20,3 +20,7 @@ for file in file_name:
         shutil.move(path + file, path + 'Compressed files/' + file)
     elif '.mp3' in file and not os.path.exists(path + 'Audio files/' + file):
         shutil.move(path + file, path + 'Audio files/' + file)
+
+# You've done well by organizing files into separate folders and ensuring no duplicate moves are made. The code is concise and gets the job done.
+# Areas to improve:
+# The code currently handles six file types, which is great for maximum bonus points. However, it would be beneficial to consider a more flexible method for handling additional file types.

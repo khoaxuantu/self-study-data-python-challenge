@@ -26,3 +26,6 @@ for file in files:
         shutil.move(fr'{path}\{file}',fr'{path}\csv_file\{file}')
     elif ".mp4" in file and not os.path.exists(fr'{path}\mp4_file\{file}'):
         shutil.move(fr'{path}\{file}',fr'{path}\mp4_file\{file}')
+
+# Review:
+# I'm sorry but it seems that you got your variable name inconsistence in your code, so your code cannot run properly.

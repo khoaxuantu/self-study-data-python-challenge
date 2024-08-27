@@ -42,4 +42,13 @@ def clarify(text):
 
 for i in os.listdir(os.path.normpath(file)):
     clarify(i)
-    
+
+# Review:
+# Here are some points you can improve in your code:
+'''
+Existing Folders: The script does not handle the case where the folders already exist, which will raise a FileExistsError. Using os.makedirs() with the exist_ok=True parameter would prevent this error and make the script more robust.
+File/Path Validations: The script assumes that the provided file path and files are valid. Adding checks to ensure that the input path exists and that files are not already in their target locations would prevent potential issues.
+File Overwriting: If a file with the same name already exists in the destination folder, the script could potentially overwrite it. Consider implementing logic to handle such cases, perhaps by renaming the file or skipping it.
+The use of a global variable (a) in the Formated function is unnecessary and could lead to issues in larger scripts. Instead, return the formatted string directly from the function and use it locally within clarify.
+Additionally, since the script relies on re.findall to match file extensions, consider simplifying the logic by directly checking the file extension using string operations like endswith() for more readability and performance.
+'''

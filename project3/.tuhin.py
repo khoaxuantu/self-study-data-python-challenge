@@ -32,3 +32,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Review:
+'''
+Use pathlib for Path Operations: Since you're already importing pathlib, you can use it to handle paths, which provides a more modern and intuitive interface compared to os.path.
+Error Handling: Add error handling to manage cases where file operations might fail, such as permission issues or if the file is already in the destination folder.
+And remember that out project would require you to sort files into different file types. E.g: Documents: .pdf, .txt; Audio: .mp3, .av
+'''

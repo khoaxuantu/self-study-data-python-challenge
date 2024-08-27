@@ -25,4 +25,12 @@ for file in filename:
     else:
         print("This file type not have it own directory")
     
-    
+
+# Review:
+'''
+Use os.path.join for Path Construction: This ensures compatibility across different operating systems and avoids potential issues with path separators.
+Check File Extension More Robustly: Instead of using in to check for file extensions, use os.path.splitext to handle extensions more reliably.
+Avoid Hardcoding Paths: Use variables or configuration files for paths to make the code more flexible and maintainable.
+Remove Redundant Directory Creation Check: The directory creation logic is correct but could be simplified by using os.makedirs with exist_ok=True to create directories and avoid a separate check.
+Refactor File Type Handling: Use a dictionary to map file extensions to their target directories for cleaner and more scalable code.
+'''

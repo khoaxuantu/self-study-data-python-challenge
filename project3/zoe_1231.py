@@ -62,3 +62,8 @@ for item in os.listdir(directory_path):
             print(f'{item} không có phần mở rộng hợp lệ.')
 
 print('Đã chuyển các files xong.')
+
+# Great job implementing the file sorting logic! You've successfully handled six different file types, which meets the highest bonus point criteria. The code is well-structured and clear.
+# However, there still some areas to improve:
+# Consider adding error handling for cases where files cannot be moved or folders cannot be created.
+# It might be useful to include sorting for additional file types or create a general folder for unsupported files.

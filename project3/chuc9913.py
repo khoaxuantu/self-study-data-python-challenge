@@ -27,3 +27,11 @@ if __name__ == '__main__':
     source_directory = 'C:/Users/Admin/Documents/pro3'
     organize_files(source_directory)
     print("Files organized successfully!")
+
+# Review:
+'''
+Expand Folder Mapping: Consider adding more file types to the folder_names dictionary to handle a wider variety of files.
+Handle Unmapped Extensions: If a file's extension isn't in folder_names, you could add it to an "Others" folder, ensuring that no files are left unorganized.
+Error Handling: Implement error handling to manage any potential issues (e.g., permission errors) that might occur during file operations.
+Print Feedback: Add feedback for files that are moved, so the user knows exactly what is being organized.
+'''

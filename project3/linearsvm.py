@@ -61,3 +61,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Review:
+# You overkill this project; only one thing you may want to consider: Wrapped the shutil.move operation in a try-except block to catch any errors during file moves.

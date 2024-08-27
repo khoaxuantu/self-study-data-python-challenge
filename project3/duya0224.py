@@ -35,3 +35,10 @@ for folder in folders.keys():
                 print(f"  {filename}")
 
 print("\nHoàn thành sắp xếp các tệp vào các thư mục tương ứng.")
+
+# Review:
+'''
+File Extension Handling: Consider using os.path.splitext(filename) to extract the file extension instead of filename.split('.')[-1]. This method is more robust, especially for filenames with multiple periods.
+
+Efficiency: Instead of iterating over the folders' keys multiple times, you could use a dictionary that directly maps file extensions to their respective folders, reducing the number of iterations.
+'''

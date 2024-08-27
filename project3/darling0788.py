@@ -36,3 +36,9 @@ for file in files:
                 shutil.move(file_path, dest_path)
                 print('Moved', file, 'to', folder)
                 break
+# Review:
+'''
+Handling Unrecognized File Types: Add an "Others" category for files that don't match any predefined extensions.
+Use of exist_ok=True: When creating directories, you can simplify the check by using os.makedirs(path, exist_ok=True).
+Avoid Hardcoding Paths: Consider allowing users to input the source_dir or using a command-line argument to make the script more flexible.
+'''

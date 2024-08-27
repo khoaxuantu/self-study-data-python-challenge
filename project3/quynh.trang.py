@@ -23,3 +23,13 @@ def organize_files(folder):
 
 path = 'D://H4TF'  # Replace with the path to your folder
 organize_files(path)
+
+# Review:
+# Good job on completing this project!
+# Here are some points you can improve your project, keep it up!
+'''
+1. Handling Non-Matching Files:
+If a file's extension doesn't match any in the category dictionary, it won't be moved. You might want to log these or move them to a separate "others" folder.
+2. Improved Error Handling:
+The current setup handles known file types well, but for unknown file types, it only prints a message. You might want to log these unknown files or handle them differently.
+'''

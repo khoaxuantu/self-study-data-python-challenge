@@ -42,3 +42,11 @@ for file_name in os.listdir(source_dir):
         print(f'Moved {file_name} to {folder_name}.')
     else:
         print(f'There is no {file_name} file.')
+
+# Review:
+'''
+Handling Files without Extensions: The code assumes all files have extensions. However, if a file doesn't have an extension, it will throw an IndexError or misbehave.
+Directory Path Handling: The destination path for moving files doesn't account for the fact that folder_name is being used as a relative path. This can lead to issues if folder_name isn't relative to the source_dir.
+Redundant File Move Check: The else clause prints "There is no {file_name} file." for files that don't match any extension in file_types. This message might be misleading since it implies the file doesn't exist, when in fact, it just doesn't have a matching extension.
+Destination Path Construction: The destination_file is constructed without a directory path, which may leading to incorrect file moves.
+'''

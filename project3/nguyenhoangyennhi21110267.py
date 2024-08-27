@@ -29,3 +29,12 @@ for filename in os.listdir(directory):
        shutil.copy(f"D:/sortfile/{filename}",f"D:/sortfile/audiofile/{filename}")
     elif ext.lower() == ".zip" or ext.lower() == ".rar" or ext.lower() == "..gz" or ext.lower() == ".tar":
        shutil.copy(f"D:/sortfile/{filename}",f"D:/sortfile/compressedfile/{filename}")
+
+# Review:
+# Good job on completing this project but here are some points you can take a look to improve it:
+'''
+Redundant Folder Creation: You could create a list or dictionary to store folder paths and iterate through them to reduce repetition in your folder creation logic.
+File Extensions Typo: There's a typo in the extension ".jng" (likely intended to be ".jpg"). Also, double periods in "..gz" might cause issues. Ensure that the extensions are correct.
+File Overwriting: Since you are copying files, if a file with the same name already exists in the destination, it will be overwritten. Consider handling this by renaming files or checking before copying.
+Improving Path Construction: Using os.path.join(directory, filename) instead of hardcoding paths like f"D:/sortfile/{filename}" would make your script more flexible and robust against changes in directory paths.
+'''

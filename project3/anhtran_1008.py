@@ -45,5 +45,9 @@ def org_files(dirc):
 # In[ ]:
 
 
-
+# Review:
+'''
+Return Value: The os.mkdir function does not return the path of the created directory or any value that should be assigned to a variable. It only creates the directory at the specified path. Therefore, assigning its return value to folder_type is not useful and does not represent anything meaningful.
+Therefore your sub_folder does not have a path and you can't move your files into the created folder.
+'''
 

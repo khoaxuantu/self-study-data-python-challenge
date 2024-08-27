@@ -53,5 +53,9 @@ def sort_file (path):
 
 sort_file (path = f'C:\\Users\\NguyenThiQuynhNhu\\Documents\\nhunguyen\\Python_Challenge\\project_3\\files')
 
+# Good job on creating this project! Your code is very robust and pratical for file organization!
+# Here are some points you can consider to improve your code:
+# The check for '.' in the filename to distinguish files from folders might not be reliable for files without extensions. It could be improved by using os.path.isfile() to verify if it's a file.
+
 
 

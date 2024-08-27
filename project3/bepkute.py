@@ -49,6 +49,11 @@ organize_files_by_type_and_extension(main_folder)
 
 # In[ ]:
 
-
+# Review:
+'''
+Instead of checking if a folder exists and then creating it if it doesn't, you can create a helper function to handle this logic.
+Rather than just printing a warning, you could move unknown files to a specific "Unknown" folder for better organization.
+You might want to use os.path.splitext to split the file name and extension, which is more reliable than split('.') because it handles files with multiple dots in their names better.
+'''
 
 

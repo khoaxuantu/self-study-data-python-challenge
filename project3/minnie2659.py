@@ -31,3 +31,10 @@ def organize_files():
 
 # Run
 organize_files()
+
+# Review: 
+# Here are some points you can improve your code:
+'''
+Handling Unrecognized File Types: It might be beneficial to include a catch-all category for files that don't match any of the specified extensions. This way, no file is left unsorted.
+File Naming Conflicts: Implement a check for file naming conflicts. If a file with the same name already exists in the target directory, you could rename the file to avoid overwriting.
+'''

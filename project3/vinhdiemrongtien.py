@@ -2382,7 +2382,13 @@ def sort_file(folder):
     print("Files have been sorted.")
 
 
+#Please check your submission next time.
+# What's wrong with your code:
+# Folder Naming: The code creates folders based on file extensions directly, which might be problematic if extensions are not formatted consistently or if multiple file types share the same extension. This can result in disorganized or unexpected folder names.
 
+# Variable Usage: The link_folder variable is defined but not used in the sort_file function. This might lead to confusion or incorrect directory paths.
+
+# Non-Standard Extensions: Files with unusual or missing extensions will be placed in folders named after these extensions, which could be problematic.
 
 # In[ ]:
 

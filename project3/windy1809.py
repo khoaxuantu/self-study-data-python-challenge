@@ -70,3 +70,10 @@ for item in os.listdir(directory_path):
             print(f'{item} Invalid file extension.')
 
 print('Files have been sorted successfully')
+
+# Your script is well-structured and efficiently organizes files into their respective folders based on their extensions.
+
+# Areas to improve:
+
+# You might consider adding error handling for the shutil.move operations to manage any potential issues during the file-moving process, such as permission errors or files with the same name.
+# Including a way to handle files that don't match any of the predefined categories would make your script more robust and user-friendly.

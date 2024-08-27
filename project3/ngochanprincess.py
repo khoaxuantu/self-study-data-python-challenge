@@ -1,7 +1,7 @@
 import os
 import shutil
 
-initial_folder = r'D:\Ngọc Hân Princess\Folder_organized' #thu muc chua cac tep can sap xep
+initial_folder = r'D:\Test proj 3' #thu muc chua cac tep can sap xep
 
 def file_organized(initial_folder, TypeOfFolder):
     for file in os.listdir(initial_folder):
@@ -25,3 +25,11 @@ TypeOfFolder = {
 }
 
 file_organized(initial_folder, TypeOfFolder)
+
+# Review:
+# Here are some points you can look through to improve your code:
+'''
+Handling Files Without Extensions:vCurrently, files without extensions or with unknown extensions will not be moved. You might want to add a fallback mechanism to handle these files, possibly moving them to an "Others" or "Unknown" folder.
+Overwriting Conflicts: If two files with the same name exist in the same folder, shutil.move will overwrite the existing file. You might consider adding a mechanism to rename files if a conflict is detected.
+Exception Handling: Including try-except blocks around critical operations (like moving files) could help gracefully handle unexpected errors such as permission issues or read/write errors.
+'''

@@ -28,3 +28,9 @@ while path is None:
     else:
         print("Path does not exist. Please try again")
         path = None
+# Review:
+'''
+Incorrect File Path Handling: The code is currently checking and working with paths relative to the current working directory rather than the specified path. When using os.listdir(path), the loop variable p only contains the filename, not the full path. This leads to issues when attempting to move files using os.rename() because it doesn't have the correct source path.
+os.rename() Usage:The os.rename() function requires both the source and destination paths to be absolute paths, but the code provides only the filename as the source path (p). This causes an error since os.rename() cannot find the file.
+Path Handling with os.path.isfile(): The os.path.isfile(p) check is looking for the file in the current working directory instead of the provided directory path. This is because p is just the filename and not the full path to the file.
+'''

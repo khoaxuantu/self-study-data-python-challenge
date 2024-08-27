@@ -20,3 +20,8 @@ def organize_files_by_type(main_folder):
 main_folder = r'C:\Users\User\Downloads\Main_file'  # my address file main_folder
 organize_files_by_type(main_folder)
 
+# Areas to improve:
+
+# Extension Handling: The script assumes that the file extension is always present and separated by a single dot. Files without extensions or with multiple dots (e.g., example.file.txt) might not be handled correctly. Consider using os.path.splitext to handle extensions more reliably.
+# Error Handling: Adding error handling for file operations would make the script more robust. For instance, handling exceptions when creating directories or moving files can prevent the script from crashing unexpectedly.
+

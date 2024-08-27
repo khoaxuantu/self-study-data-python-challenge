@@ -27,3 +27,10 @@ for file_ in list_:
 	else:
 		os.makedirs(path+'/'+ext)
 		shutil.move(path+'/'+file_, path+'/'+ext+'/'+file_)
+
+# Review:
+'''
+Handle Edge Cases: Consider handling cases where the file might have multiple dots in the name (e.g., file.name.extension). The current approach correctly handles it by using os.path.splitext(file_) but be cautious of files with no extension.
+Avoid Redundant Operations: If you extract the file's extension and check if it exists, this can be done only once before checking whether the directory already exists or not.
+And remember that out project would require you to sort files into different file types. E.g: Documents: .pdf, .txt; Audio: .mp3, .av
+'''

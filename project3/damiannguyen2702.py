@@ -1,6 +1,6 @@
 import os, shutil
 
-path = r"C:/Users/Admin/Downloads/Jupyter Notebook/.ipynb_checkpoints/Project 3/"
+path = r"D:/Test proj 3/"
 
 file_name = os.listdir(path)
 
@@ -23,3 +23,10 @@ for file in file_name:
         shutil.move(path + file, path + "compressed file/" + file)
     elif ".py" in file and not os.path.exists(path + "executables file/" + file):
         shutil.move(path + file, path + "executables file/" + file)
+
+# Review:
+'''
+Avoid Repetitive Code: Instead of repeating the file type checks, use a dictionary to map extensions to folder names, making the code more concise and easier to maintain.
+Generalize File Types: Consider normalizing the file extensions by converting them to lowercase to avoid missing files with uppercase extensions.
+Efficiency: Instead of checking not os.path.exists before each move, you can move the file and handle any FileExistsError that might occur. This reduces the number of file system checks.
+'''
