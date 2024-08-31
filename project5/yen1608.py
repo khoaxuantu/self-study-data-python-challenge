@@ -1,3 +1,5 @@
+# Great work! But seems like u did not implement filter function.
+
 import requests
 import csv
 from datetime import datetime
@@ -10,12 +12,13 @@ import re
 import schedule
 import time
 
+
 def send_email_with_smtp(subject, body, to_email, file_path):
     print(f"Sending email to {to_email}...")
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
-    sender_email = "xxxx@gmail.com" # Don't send me your email sis -.-
-    sender_password = "<<PASSWORD_MASK>>" # Don't send me your password
+    sender_email = "xxxx@gmail.com"  # Don't send me your email sis -.-
+    sender_password = "<<PASSWORD_MASK>>"  # Don't send me your password
 
     message = MIMEMultipart()
     message["From"] = sender_email
@@ -26,7 +29,7 @@ def send_email_with_smtp(subject, body, to_email, file_path):
 
     with open(file_path, "rb") as attachment:
         part = MIMEApplication(attachment.read(), Name=file_path)
-    part['Content-Disposition'] = f'attachment; filename="{file_path}"'
+    part["Content-Disposition"] = f'attachment; filename="{file_path}"'
     message.attach(part)
 
     try:
@@ -38,16 +41,40 @@ def send_email_with_smtp(subject, body, to_email, file_path):
     except Exception as e:
         print(f"Failed to send email: {e}")
 
+
 def fetch_job_details(url):
     response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    description = soup.select_one('#JobDescription .prose').get_text('')
-    minimum_experience = soup.find('h3', string='Năm kinh nghiệm tối thiểu').find_next('a').text.strip()
-    level = soup.find('h3', string='Cấp bậc').find_next('a').text.strip()
-    type_w = soup.find('h3', string='Loại hình').find_next('a').text.strip()
-    type_c = soup.find('h3', string='Loại hợp đồng').find_next('a').text.strip()
-    skills = soup.find('h3', string='Các công nghệ sử dụng').find_next('a').text.strip()
-    return description, minimum_experience, level, type_w, type_c, skills, (description+' '+minimum_experience+' '+level+' '+type_w+' '+type_c+' '+skills)
+    soup = BeautifulSoup(response.text, "html.parser")
+    description = soup.select_one("#JobDescription .prose").get_text("")
+    minimum_experience = (
+        soup.find("h3", string="Năm kinh nghiệm tối thiểu").find_next("a").text.strip()
+    )
+    level = soup.find("h3", string="Cấp bậc").find_next("a").text.strip()
+    type_w = soup.find("h3", string="Loại hình").find_next("a").text.strip()
+    type_c = soup.find("h3", string="Loại hợp đồng").find_next("a").text.strip()
+    skills = soup.find("h3", string="Các công nghệ sử dụng").find_next("a").text.strip()
+    return (
+        description,
+        minimum_experience,
+        level,
+        type_w,
+        type_c,
+        skills,
+        (
+            description
+            + " "
+            + minimum_experience
+            + " "
+            + level
+            + " "
+            + type_w
+            + " "
+            + type_c
+            + " "
+            + skills
+        ),
+    )
+
 
 def fetch_topdev_jobs(max_pages=5, jobs_per_page=20):
     print("Fetching jobs from TopDev...")
@@ -61,7 +88,7 @@ def fetch_topdev_jobs(max_pages=5, jobs_per_page=20):
             response.raise_for_status()
             data = response.json()
 
-            jobs = data.get('data', [])
+            jobs = data.get("data", [])
             all_jobs.extend(jobs)
 
             print(f"Fetched page {page} with {len(jobs)} jobs")
@@ -76,9 +103,11 @@ def fetch_topdev_jobs(max_pages=5, jobs_per_page=20):
 
     return all_jobs
 
+
 def clean_html(html_content):
-    soup = BeautifulSoup(html_content, 'html.parser')
+    soup = BeautifulSoup(html_content, "html.parser")
     return soup.get_text(strip=True)
+
 
 def format_date(date_str, input_format="%Y-%m-%d", output_format="%Y-%m-%d"):
     try:
@@ -86,38 +115,81 @@ def format_date(date_str, input_format="%Y-%m-%d", output_format="%Y-%m-%d"):
     except ValueError:
         return datetime.now().strftime(output_format)
 
-def save_jobs_to_csv(jobs, filename):
-    language_regex = re.compile(r'\b(' + '|'.join(["Python"]) + r')\b', re.IGNORECASE)
-    include_keywords_regex = re.compile(r'\b(' + '|'.join(["Fulltime"]) + r')\b', re.IGNORECASE)
-    exclude_keywords_regex = re.compile(r'\b(' + '|'.join(["intern"]) + r')\b', re.IGNORECASE)
 
-    with open(filename, 'w', newline='', encoding='utf-8') as file:
+def save_jobs_to_csv(jobs, filename):
+    language_regex = re.compile(r"\b(" + "|".join(["Python"]) + r")\b", re.IGNORECASE)
+    include_keywords_regex = re.compile(
+        r"\b(" + "|".join(["Fulltime"]) + r")\b", re.IGNORECASE
+    )
+    exclude_keywords_regex = re.compile(
+        r"\b(" + "|".join(["intern"]) + r")\b", re.IGNORECASE
+    )
+
+    with open(filename, "w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
-        writer.writerow(["Title", "Link", "Company", "Level", "Location", "Description", "Date", "Tag", "Img", "Time Update"])
+        writer.writerow(
+            [
+                "Title",
+                "Link",
+                "Company",
+                "Level",
+                "Location",
+                "Description",
+                "Date",
+                "Tag",
+                "Img",
+                "Time Update",
+            ]
+        )
 
         for job in jobs:
-            title = job.get('title', '')
-            job_id = job.get('id', '')
+            title = job.get("title", "")
+            job_id = job.get("id", "")
 
-            link = f"https://topdev.vn/viec-lam/{job_id}" if job_id else ''
-            company = job.get('company', {}).get('display_name', '')
-            addresses = job.get('addresses', {}).get('full_addresses', [])
-            location = ', '.join(addresses) if addresses else ''
-            description, minimum_experience, level, type_w, type_c, skills, description_regex = fetch_job_details(link)
-            date = format_date(job.get('published', {}).get('date', ''))
-            skills = job.get('skills_str', '')
-            img = job.get('company', {}).get('image_logo', '')
-            time_update = format_date(job.get('refreshed', {}).get('date', ''), input_format="%Y-%m-%d %H:%M:%S", output_format="%Y-%m-%d %H:%M:%S")
-            if (language_regex.search(description_regex) and
-                        include_keywords_regex.search(description_regex) and
-                        not exclude_keywords_regex.search(description_regex)):
-                print('Find job: '+title)
-                writer.writerow([
-                    title, link, company, level, location, description,
-                    date, skills, img, time_update
-                ])
+            link = f"https://topdev.vn/viec-lam/{job_id}" if job_id else ""
+            company = job.get("company", {}).get("display_name", "")
+            addresses = job.get("addresses", {}).get("full_addresses", [])
+            location = ", ".join(addresses) if addresses else ""
+            (
+                description,
+                minimum_experience,
+                level,
+                type_w,
+                type_c,
+                skills,
+                description_regex,
+            ) = fetch_job_details(link)
+            date = format_date(job.get("published", {}).get("date", ""))
+            skills = job.get("skills_str", "")
+            img = job.get("company", {}).get("image_logo", "")
+            time_update = format_date(
+                job.get("refreshed", {}).get("date", ""),
+                input_format="%Y-%m-%d %H:%M:%S",
+                output_format="%Y-%m-%d %H:%M:%S",
+            )
+            if (
+                language_regex.search(description_regex)
+                and include_keywords_regex.search(description_regex)
+                and not exclude_keywords_regex.search(description_regex)
+            ):
+                print("Find job: " + title)
+                writer.writerow(
+                    [
+                        title,
+                        link,
+                        company,
+                        level,
+                        location,
+                        description,
+                        date,
+                        skills,
+                        img,
+                        time_update,
+                    ]
+                )
 
         print(f"Saved {len(jobs)} jobs to {filename}")
+
 
 def job():
     print("Starting job execution...")
@@ -141,6 +213,7 @@ def job():
 
     print("Job execution completed.")
 
+
 def run_schedule():
     print("Starting scheduler...")
     schedule.every().day.at("23:25").do(job)  # Chạy job hàng ngày lúc 10:00 AM
@@ -148,6 +221,7 @@ def run_schedule():
     while True:
         schedule.run_pending()
         time.sleep(1)
+
 
 if __name__ == "__main__":
     run_schedule()

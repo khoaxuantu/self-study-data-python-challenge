@@ -1,3 +1,5 @@
+# Great work! But seems like u did not implement the bonus points. And I commented on the code, please find NOTE: to see my comments.
+
 # -*- coding: utf-8 -*-
 """20240817_PROJECT 5.ipynb
 
@@ -19,6 +21,7 @@ import time
 """
 
 # Vì lý do chỉ lấy được 10 dòng data, nên em sẽ tự refresh thủ công trang web lại nhiều lần
+# NOTE: Research on Selenium to load more data automatically
 
 title_jobs = []
 links = []
@@ -26,52 +29,54 @@ company_names = []
 locations = []
 posted_date = []
 
-url = 'https://topdev.vn/viec-lam-it?src=topdev_home&medium=newjobs'
+url = "https://topdev.vn/viec-lam-it?src=topdev_home&medium=newjobs"
 
 response = requests.get(url)
-soup = BeautifulSoup(response.text, 'html.parser')
-page = soup.find_all('div', 'col-span-2')[0]
-cells = page.find_all('li', 'mb-4 last:mb-0')
+soup = BeautifulSoup(response.text, "html.parser")
+page = soup.find_all("div", "col-span-2")[0]
+cells = page.find_all("li", "mb-4 last:mb-0")
 
 for cell in cells:
-    job = cell.find('div', 'flex-1')
+    job = cell.find("div", "flex-1")
     if job:
-        title_job = job.find('h3', 'line-clamp-1').find('a')
+        title_job = job.find("h3", "line-clamp-1").find("a")
         if title_job:
             title = title_job.text
-            link = title_job['href']
+            link = title_job["href"]
             title_jobs.append(title)
             links.append(link)
 
-        company_name = job.find('a', 'text-gray-600 transition-all hover:text-primary')
+        company_name = job.find("a", "text-gray-600 transition-all hover:text-primary")
         if company_name:
             company = company_name.text
             company_names.append(company)
 
-        location_job = cell.find('div', 'flex flex-wrap items-end gap-2 text-gray-500').find('p')
+        location_job = cell.find(
+            "div", "flex flex-wrap items-end gap-2 text-gray-500"
+        ).find("p")
         if location_job:
             location = location_job.text
             locations.append(location)
 
-        date_posted = cell.find('p', 'whitespace-nowrap text-sm text-gray-400')
+        date_posted = cell.find("p", "whitespace-nowrap text-sm text-gray-400")
         if date_posted:
             posted = date_posted.text
             posted_date.append(posted)
 
 print(title_jobs)
-print('------------------------')
+print("------------------------")
 print(links)
-print('------------------------')
+print("------------------------")
 print(company_names)
-print('------------------------')
+print("------------------------")
 print(locations)
-print('------------------------')
+print("------------------------")
 print(posted_date)
-print('------------------------')
+print("------------------------")
 
 new_links = []
 for link in links:
-    new_link = 'https://topdev.vn' + link[3:]
+    new_link = "https://topdev.vn" + link[3:]
     new_links.append(new_link)
     print(new_link)
 
@@ -80,32 +85,34 @@ descriptions = []
 for link in new_links:
 
     response = requests.get(link)
-    soup = BeautifulSoup(response.text, 'html.parser')
+    soup = BeautifulSoup(response.text, "html.parser")
 
-    page = soup.find('div', 'rounded bg-white p-4 md:px-6 md:py-4')
-    description_job = page.find('div', 'prose max-w-full text-sm text-black lg:text-base')
-    description = description_job.find_all('li')
+    page = soup.find("div", "rounded bg-white p-4 md:px-6 md:py-4")
+    description_job = page.find(
+        "div", "prose max-w-full text-sm text-black lg:text-base"
+    )
+    description = description_job.find_all("li")
 
-    description_by_job = ''
+    description_by_job = ""
     for d in description:
         # print(d.text)
         # print('------1')
-        description_by_job = description_by_job.strip() + ' ' + d.text
+        description_by_job = description_by_job.strip() + " " + d.text
         # print(description_by_job)
 
     descriptions.append(description_by_job)
     # print('------')
 
 for i in descriptions:
-    print(i, '---------------')
+    print(i, "---------------")
 
 data = {
-'Job title': title_jobs,
-'Company name': company_names,
-'Job location': locations,
-'Job description': descriptions,
-'Date posted': posted_date,
-'Job link': new_links
+    "Job title": title_jobs,
+    "Company name": company_names,
+    "Job location": locations,
+    "Job description": descriptions,
+    "Date posted": posted_date,
+    "Job link": new_links,
 }
 
 df = pd.DataFrame(data)
@@ -121,18 +128,20 @@ title_job = []
 
 for link in new_links:
     response = requests.get(link)
-    soup = BeautifulSoup(response.text, 'html.parser')
+    soup = BeautifulSoup(response.text, "html.parser")
 
-    cell1 = soup.find('div', 'w-3/4 flex flex-initial flex-col')
-    job = cell1.find('h1', 'text-2xl font-bold text-black')
+    cell1 = soup.find("div", "w-3/4 flex flex-initial flex-col")
+    job = cell1.find("h1", "text-2xl font-bold text-black")
     title_job.append(job.text)
 
-    requirement_job = soup.find_all('div', 'prose max-w-full text-sm text-black lg:text-base')[1]
-    requirements_list = requirement_job.find_all('li')
+    requirement_job = soup.find_all(
+        "div", "prose max-w-full text-sm text-black lg:text-base"
+    )[1]
+    requirements_list = requirement_job.find_all("li")
 
-    requirement_by_job = ''
+    requirement_by_job = ""
     for r in requirements_list:
-        requirement_by_job = requirement_by_job.strip() + ' ' + r.text
+        requirement_by_job = requirement_by_job.strip() + " " + r.text
 
     requirement.append(requirement_by_job)
 
@@ -140,11 +149,11 @@ job_requirement = dict(zip(title_job, requirement))
 print(job_requirement)
 
 for job, requirement in job_requirement.items():
-    for j in re.findall(r'\w[PpYyTtHhOoNn]+\w', requirement):
-        if j.lower() == 'python':
-            print(job, ': ', requirement)
+    for j in re.findall(r"\w[PpYyTtHhOoNn]+\w", requirement):
+        if j.lower() == "python":
+            print(job, ": ", requirement)
             break
-    print('--------------------')
+    print("--------------------")
 
 # Jobs that include certain keywords (e.g., "remote", "full-time").
 
@@ -153,20 +162,27 @@ title_job = []
 
 for link in new_links:
     response = requests.get(link)
-    soup = BeautifulSoup(response.text, 'html.parser')
+    soup = BeautifulSoup(response.text, "html.parser")
 
-    cell1 = soup.find('div', 'w-3/4 flex flex-initial flex-col')
-    job = cell1.find('h1', 'text-2xl font-bold text-black')
+    cell1 = soup.find("div", "w-3/4 flex flex-initial flex-col")
+    job = cell1.find("h1", "text-2xl font-bold text-black")
     title_job.append(job.text)
 
-    cell2 = soup.find('div', 'flex flex-col self-stretch border-t border-gray-200 p-4')
-    contract_type = cell2.find_all('div', 'item-card-info mb-2 w-1/2 pl-3 md:mb-4 md:w-full md:pl-0')[1]
-    contract = contract_type.find('a', 'text-sm hover:text-primary-300 hover:underline md:text-base')
+    cell2 = soup.find("div", "flex flex-col self-stretch border-t border-gray-200 p-4")
+    contract_type = cell2.find_all(
+        "div", "item-card-info mb-2 w-1/2 pl-3 md:mb-4 md:w-full md:pl-0"
+    )[1]
+    contract = contract_type.find(
+        "a", "text-sm hover:text-primary-300 hover:underline md:text-base"
+    )
     contracts_type.append(contract.text)
 
 job_contract = dict(zip(title_job, contracts_type))
 print(job_contract)
 
 for job, contract in job_contract.items():
-    if re.findall(r'\b(fulltime|remote)\b', contract.lower())[0] in ('fulltime', 'remote'):
+    if re.findall(r"\b(fulltime|remote)\b", contract.lower())[0] in (
+        "fulltime",
+        "remote",
+    ):
         print(job)
