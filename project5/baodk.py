@@ -1,3 +1,5 @@
+# You did very hard in this project! But you did not focus the project objectives. You should also implement filter function using regex. Furthermore, you implement too many functions and they do not have any usages relate to the main objectives as well as the bonus points.
+
 from os import rename
 from datetime import datetime
 from csv import DictWriter, DictReader
